@@ -3,12 +3,25 @@
 Personal Website
 
 ## 参考网站：
+-   https://antfu.me/:
+    -   [Github](https://github.com/antfu/antfu.me)
+    -   [Official Website](https://antfu.me/)
 -   https://hyoban.cc/:
-    [Github](https://github.com/hyoban/hyoban.cc)
-    [Official Website](https://hyoban.cc/)
+    -   [Github](https://github.com/hyoban/hyoban.cc)
+    -   [Official Website](https://hyoban.cc/)
 -   https://fuxiaochen.com/:
-    [Github](https://github.com/yaolifeng0629/fuxiaochen)
-    [Official Website](https://fuxiaochen.com/)
+    -   [Github](https://github.com/yaolifeng0629/fuxiaochen)
+    -   [Official Website](https://fuxiaochen.com/)
+-   https://innei.in/
+    -   [Github](https://github.com/yaolifeng0629/Shiro)
+    -   [Official Website](https://innei.in/)
+
+### 目前想法
+1.  首页参考 fuxiaocheng 主页
+2.  其他页面参考 hyoban 页面
+3.  文章直接写在 Github 文件中，得想一个及时同步文章得方案
+4.  文章使用 Markdown 的语法
+5.  主题参考 antfu 个人网站
 
 ### Ideas
 
