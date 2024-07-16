@@ -10,10 +10,10 @@ Personal Website
     -   [Github](https://github.com/hyoban/hyoban.cc)
     -   [Official Website](https://hyoban.cc/)
 -   https://fuxiaochen.com/:
-    -   [Github](https://github.com/yaolifeng0629/fuxiaochen)
+    -   [Github](https://github.com/aifuxi/fuxiaochen)
     -   [Official Website](https://fuxiaochen.com/)
 -   https://innei.in/
-    -   [Github](https://github.com/yaolifeng0629/Shiro)
+    -   [Github](https://github.com/Innei/Shiro)
     -   [Official Website](https://innei.in/)
 
 ### 目前想法
