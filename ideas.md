@@ -3,6 +3,7 @@
 Personal Website
 
 ## 参考网站：
+
 -   https://antfu.me/:
     -   [Github](https://github.com/antfu/antfu.me)
     -   [Official Website](https://antfu.me/)
@@ -17,6 +18,7 @@ Personal Website
     -   [Official Website](https://innei.in/)
 
 ### 目前想法
+
 1.  首页参考 fuxiaocheng 主页
 2.  其他页面参考 hyoban 页面
 3.  文章直接写在 Github 文件中，得想一个及时同步文章得方案
