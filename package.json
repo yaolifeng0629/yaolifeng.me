@@ -2,8 +2,9 @@
     "name": "yaolifeng.me",
     "version": "0.1.0",
     "private": true,
+    "type": "module",
     "scripts": {
-        "dev": "next dev -p 3001",
+        "dev": "next dev -p 9268",
         "build": "cross-env ANALYZE=true next build",
         "start": "next start -p 3001",
         "test": "vitest run",
@@ -19,7 +20,11 @@
         "react-dom": "^18.3.1",
         "sass": "^1.77.8",
         "styled-components": "^6.1.12",
-        "zustand": "^4.5.4"
+        "zustand": "^4.5.4",
+        "slugify": "^1.6.6",
+        "clsx": "^1.2.1",
+        "tailwind-merge": "^1.13.2",
+        "react-type-animation": "^3.2.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.3.0",
