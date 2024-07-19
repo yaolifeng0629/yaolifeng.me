@@ -8,7 +8,7 @@ import {
 
 import { BILIBILI_PAGE, EMAIL, GITHUB_PAGE, JUEJIN_PAGE } from '@/constants';
 
-export const socialMediaList: Array<{
+const socialMediaList: Array<{
     icon: React.ReactNode;
     label: string;
     link: string;
@@ -40,3 +40,4 @@ export const socialMediaList: Array<{
     }
 ];
 
+export default socialMediaList;

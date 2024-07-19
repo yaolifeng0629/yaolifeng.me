@@ -3,7 +3,7 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
-export const TypeIntro = () => {
+const TypeIntro = () => {
     return (
         <TypeAnimation
             className="text-2xl tracking-widest md:text-5xl"
@@ -13,4 +13,4 @@ export const TypeIntro = () => {
         />
     );
 };
-
+export default TypeIntro;

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 // import { Button, buttonVariants } from "@/components/ui/button";
 // import {
@@ -7,13 +7,14 @@ import Link from 'next/link';
 //   TooltipTrigger,
 // } from "@/components/ui/tooltip";
 
+// eslint-disable-next-line import/order
+import TypeIntro from './type-intro';
 import { NICKNAME, PATHS } from '@/constants';
-import { TypeIntro } from '@/pages/home';
 import { cn } from '@/lib/utils';
 
 // import { socialMediaList } from "./social-media";
 
-export const HeroSection = () => {
+const HeroSection = () => {
     let delay = 0;
 
     // 每次调用，增加延时
@@ -119,3 +120,5 @@ export const HeroSection = () => {
         </div>
     );
 };
+
+export default HeroSection;
