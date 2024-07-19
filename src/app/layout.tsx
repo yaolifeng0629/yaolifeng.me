@@ -1,7 +1,7 @@
 import StyledComponentsRegistry from '@/lib/registry';
 
 import type { Metadata } from 'next';
-import './globals.css';
+import '@/styles/global.css';
 
 export const metadata: Metadata = {
     title: 'yaolifeng.me',
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
     return (
         <html>
-            <body>
+            <body className="dark">
                 <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
             </body>
         </html>
