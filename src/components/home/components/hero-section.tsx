@@ -32,7 +32,7 @@ const HeroSection = () => {
             </p>
             <strong
                 className={cn(
-                    `text-5xl md:text-8xl tracking-widest font-black  bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500`,
+                    `text-5xl md:text-8xl tracking-widest font-black  bg-clip-text  custom-strong bg-gradient-to-r from-cyan-400 to-blue-500`,
                     'animate-fade-up animate-ease-in-out'
                 )}
                 style={{
@@ -60,7 +60,7 @@ const HeroSection = () => {
                 }}
             >
                 喜欢
-                <span className={`font-semibold text-[#00d8ff]`}>Vue</span>、
+                <span className={`font-semibold text-[#45ca9d]`}>Vue</span>、
                 <span className={`font-semibold text-[#00d8ff]`}>React</span>、
                 <span className={`font-semibold text-[#007acc]`}>TypeScript</span>
                 <span className="ml-4">\owo/ ~</span>

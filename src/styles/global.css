@@ -29,6 +29,8 @@
         --border: 0 0% 14.9%;
         --input: 0 0% 14.9%;
         --ring: 0 0% 83.1%;
+        --selection-color: rgb(0, 0, 0);
+        --selection-background: rgb(255, 239, 92);
     }
 
     *,
@@ -44,9 +46,20 @@
 
     /* 选中文本样式 */
     ::selection,
+    strong::selection,
     .search-result__item em {
-        color: rgb(0, 0, 0);
-        background: rgb(255, 239, 92);
-        -webkit-text-fill-color: unset !important;
+        color: var(--selection-color);
+        background: var(--selection-background);
+        -webkit-text-fill-color: unset;
+        background-image: none;
+    }
+
+    /* 修复首页 NickName 复制颜色失效问题 */
+    /* Tips: 原因是 strong 标签内使用了 WebkitTextFillColor 属性，这个属性覆盖了 ::selection 伪元素定义的颜色 */
+    .custom-strong::selection {
+        background-image: none !important;
+        color: var(--selection-color) !important;
+        background: var(--selection-background) !important;
+        -webkit-text-fill-color: rgb(0, 0, 0) !important;
     }
 }
