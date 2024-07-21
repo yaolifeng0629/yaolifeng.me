@@ -10,9 +10,28 @@
 
 @layer base {
     :root {
-        --background: #050505;
+        /* --background: #050505;
         --primary: #525252;
-        --text-color: #ffffff;
+        --primary-foreground: #fafafa; */
+        --background: #08080a;
+        --foreground: #ffffff;
+        --card: #08080a;
+        --card-foreground: #ffffff;
+        --popover: #08080a;
+        --popover-foreground: #ffffff;
+        --primary: #ffffff;
+        --primary-foreground: #090909;
+        --secondary: #232329;
+        --secondary-foreground: #ffffff;
+        --muted: #232329;
+        --muted-foreground: #a1a1c3;
+        --accent: #232329;
+        --accent-foreground: #ffffff;
+        --destructive: #d63030;
+        --destructive-foreground: #ffffff;
+        --border: #232329;
+        --input: #232329;
+        --ring: #d1d1ff;
         --selection-color: rgb(0, 0, 0);
         --selection-background: rgb(255, 239, 92);
     }
@@ -25,9 +44,9 @@
 
     html,
     body {
-        @apply w-full h-full;
+        @apply w-full h-full antialiased;
         background-color: var(--background);
-        color: var(--text-color);
+        color: var(--foreground);
     }
 
     /* 选中文本样式 */

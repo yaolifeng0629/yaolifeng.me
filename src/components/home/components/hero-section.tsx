@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/components/ui/tooltip';
 
 import socialMediaList from './social-media';
 import TypeIntro from './type-intro';
@@ -63,7 +64,7 @@ const HeroSection = () => {
             </p>
             <p
                 className={cn(
-                    'text-base md:text-2xl text-muted-foreground tracking-widest',
+                    'text-base md:text-2xl text-[#a3a3a3] tracking-widest',
                     'animate-fade-up animate-ease-in-out'
                 )}
                 style={{
@@ -78,23 +79,14 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                <Link href={PATHS.SITE_BLOG}>
-                    <button
-                        className={cn(
-                            `inline-block rounded-2xl border border-gray-600 px-3 py-3 text-sm font-medium text-white hover:bg-transparent focus:outline-none`
-                        )}
-                    >
-                        我的博客
-                    </button>
+                <Link href={PATHS.SITE_BLOG} className={cn(buttonVariants({ variant: 'outline' }))}>
+                    我的博客
                 </Link>
-                <Link href={PATHS.SITE_ABOUT}>
-                    <button
-                        className={cn(
-                            `inline-block rounded-2xl border border-gray-600 px-3 py-3 text-sm font-medium text-white hover:bg-transparent focus:outline-none`
-                        )}
-                    >
-                        关于我
-                    </button>
+                <Link
+                    href={PATHS.SITE_ABOUT}
+                    className={cn(buttonVariants({ variant: 'outline' }))}
+                >
+                    关于我
                 </Link>
             </div>
             <ul
@@ -105,20 +97,18 @@ const HeroSection = () => {
             >
                 {socialMediaList.map((el) => (
                     <li key={el.link}>
-                        <Tooltip>
-                            <TooltipTrigger asChild>
-                                <button
-                                    className={cn(
-                                        `inline-block rounded-2xl border border-gray-600 px-3 py-3 text-sm font-medium text-white hover:bg-transparent focus:outline-none`
-                                    )}
-                                >
-                                    <Link href={el.link} target="_blank">
-                                        {el.icon}
-                                    </Link>
-                                </button>
-                            </TooltipTrigger>
-                            <TooltipContent>{el.label}</TooltipContent>
-                        </Tooltip>
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Button asChild variant="outline" size="icon">
+                                        <Link href={el.link} target="_blank">
+                                            {el.icon}
+                                        </Link>
+                                    </Button>
+                                </TooltipTrigger>
+                                <TooltipContent>{el.label}</TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
                     </li>
                 ))}
             </ul>

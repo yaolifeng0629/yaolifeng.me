@@ -32,7 +32,9 @@
         "@iconify-json/logos": "^1.1.42",
         "@iconify-json/skill-icons": "^1.1.8",
         "@radix-ui/react-tooltip": "^1.0.7",
-        "@radix-ui/react-toast": "^1.1.5"
+        "@radix-ui/react-toast": "^1.1.5",
+        "@radix-ui/react-slot": "^1.0.2",
+        "class-variance-authority": "^0.7.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.3.0",
