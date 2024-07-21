@@ -1,27 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export const IconSkillFigmaDark = ({
-  className,
-  ...props
+    className,
+    ...props
 }: React.HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      {...props}
-      className={cn("icon-[skill-icons--figma-dark]", className)}
-    ></span>
-  );
+    return <span {...props} className={cn('icon-[skill-icons--figma-dark]', className)}></span>;
 };
 
 export const IconSkillFigmaLight = ({
-  className,
-  ...props
+    className,
+    ...props
 }: React.HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      {...props}
-      className={cn("icon-[skill-icons--figma-light]", className)}
-    ></span>
-  );
+    return <span {...props} className={cn('icon-[skill-icons--figma-light]', className)}></span>;
 };

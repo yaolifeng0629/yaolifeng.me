@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+
 import socialMediaList from './social-media';
 import TypeIntro from './type-intro';
 
@@ -95,7 +97,7 @@ const HeroSection = () => {
                     </button>
                 </Link>
             </div>
-            {/* <ul
+            <ul
                 className={cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')}
                 style={{
                     animationDelay: `${getDelay()}ms`
@@ -105,17 +107,21 @@ const HeroSection = () => {
                     <li key={el.link}>
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Button asChild variant="outline" size="icon">
+                                <button
+                                    className={cn(
+                                        `inline-block rounded-2xl border border-gray-600 px-3 py-3 text-sm font-medium text-white hover:bg-transparent focus:outline-none`
+                                    )}
+                                >
                                     <Link href={el.link} target="_blank">
                                         {el.icon}
                                     </Link>
-                                </Button>
+                                </button>
                             </TooltipTrigger>
                             <TooltipContent>{el.label}</TooltipContent>
                         </Tooltip>
                     </li>
                 ))}
-            </ul> */}
+            </ul>
         </div>
     );
 };

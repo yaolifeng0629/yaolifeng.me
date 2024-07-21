@@ -1,15 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export const IconLogoRockyLinux = ({
-  className,
-  ...props
+    className,
+    ...props
 }: React.HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      {...props}
-      className={cn("icon-[logos--rocky-linux-icon]", className)}
-    ></span>
-  );
+    return <span {...props} className={cn('icon-[logos--rocky-linux-icon]', className)}></span>;
 };
