@@ -95,7 +95,7 @@ const HeroSection = () => {
                     </button>
                 </Link>
             </div>
-            <ul
+            {/* <ul
                 className={cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')}
                 style={{
                     animationDelay: `${getDelay()}ms`
@@ -115,7 +115,7 @@ const HeroSection = () => {
                         </Tooltip>
                     </li>
                 ))}
-            </ul>
+            </ul> */}
         </div>
     );
 };
