@@ -7,7 +7,7 @@ const TypeIntro = () => {
     return (
         <TypeAnimation
             className="text-2xl tracking-widest md:text-5xl"
-            sequence={[500, '一名前端开发工程师 。', 1000, 'A Web <Developer /> .', 1000]}
+            sequence={[500, ' An Open Source Enthusiast .', 1000, 'A Web <Developer /> .', 1000]}
             speed={10}
             repeat={Infinity}
         />

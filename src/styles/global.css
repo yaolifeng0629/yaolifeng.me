@@ -10,25 +10,9 @@
 
 @layer base {
     :root {
-        --background: 0 0% 3.9%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
+        --background: #050505;
+        --primary: #525252;
+        --text-color: #ffffff;
         --selection-color: rgb(0, 0, 0);
         --selection-background: rgb(255, 239, 92);
     }
@@ -42,6 +26,8 @@
     html,
     body {
         @apply w-full h-full;
+        background-color: var(--background);
+        color: var(--text-color);
     }
 
     /* 选中文本样式 */
@@ -61,5 +47,9 @@
         color: var(--selection-color) !important;
         background: var(--selection-background) !important;
         -webkit-text-fill-color: rgb(0, 0, 0) !important;
+    }
+    /* 搜索结果 */
+    .search-result__item em {
+        @apply mx-1 font-normal not-italic;
     }
 }

@@ -1,22 +1,18 @@
-// import Link from "next/link";
+import Link from 'next/link';
 
-// import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
-// import { buttonVariants } from "../ui/button";
+export type NextLinkProps = React.ComponentProps<typeof Link>;
 
-// export type NextLinkProps = React.ComponentProps<typeof Link>;
-
-// export const NextLink = ({ className, children, ...props }: NextLinkProps) => {
-//   return (
-//     <Link
-//       {...props}
-//       className={cn(
-//         buttonVariants({ variant: "link" }),
-//         "text-muted-foreground hover:text-primary",
-//         className,
-//       )}
-//     >
-//       {children}
-//     </Link>
-//   );
-// };
+export const NextLink = ({ className, children, ...props }: NextLinkProps) => {
+    return (
+        <Link
+            {...props}
+            className={cn(
+                `flex items-center rounded-2xl px-3 py-3 text-sm font-medium text-white hover:bg-transparent focus:outline-none`
+            )}
+        >
+            {children}
+        </Link>
+    );
+};

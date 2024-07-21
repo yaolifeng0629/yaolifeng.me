@@ -1,3 +1,5 @@
+import { Navbar } from '@/components/navbar';
+
 import StyledComponentsRegistry from '@/lib/registry';
 
 import type { Metadata } from 'next';
@@ -15,8 +17,11 @@ export default function RootLayout({
 }>) {
     return (
         <html>
-            <body className="dark">
-                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            <body>
+                <StyledComponentsRegistry>
+                    <Navbar />
+                    <main className="min-h-[calc(100vh-160px)]">{children}</main>
+                </StyledComponentsRegistry>
             </body>
         </html>
     );

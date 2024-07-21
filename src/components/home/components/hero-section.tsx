@@ -1,18 +1,10 @@
-// import Link from 'next/link';
+import Link from 'next/link';
 
-// import { Button, buttonVariants } from "@/components/ui/button";
-// import {
-//   Tooltip,
-//   TooltipContent,
-//   TooltipTrigger,
-// } from "@/components/ui/tooltip";
-
-// eslint-disable-next-line import/order
+import socialMediaList from './social-media';
 import TypeIntro from './type-intro';
+
 import { NICKNAME, PATHS } from '@/constants';
 import { cn } from '@/lib/utils';
-
-// import { socialMediaList } from "./social-media";
 
 const HeroSection = () => {
     let delay = 0;
@@ -28,7 +20,7 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                你好，我是
+                Hi there, I'm
             </p>
             <strong
                 className={cn(
@@ -59,9 +51,11 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                喜欢
+                Like&nbsp;
                 <span className={`font-semibold text-[#45ca9d]`}>Vue</span>、
                 <span className={`font-semibold text-[#00d8ff]`}>React</span>、
+                {/* <span className={`font-semibold text-[#5bac47]`}>Node</span>、 */}
+                {/* <span className={`font-semibold text-[#fcc72b]`}>Vitest</span>、 */}
                 <span className={`font-semibold text-[#007acc]`}>TypeScript</span>
                 <span className="ml-4">\owo/ ~</span>
             </p>
@@ -74,7 +68,7 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                我在这个网站记录我的成长，努力 💪 成为一个更好的程序员。
+                Record your daily life here and strive 💪 to Become a simple and better yourself
             </p>
             <div
                 className={cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')}
@@ -82,41 +76,46 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                {/* <Link
-          href={PATHS.SITE_BLOG}
-          className={cn(buttonVariants({ variant: "outline" }))}
-        >
-          我的博客
-        </Link>
-        <Link
-          href={PATHS.SITE_ABOUT}
-          className={cn(buttonVariants({ variant: "outline" }))}
-        >
-          关于我
-        </Link> */}
+                <Link href={PATHS.SITE_BLOG}>
+                    <button
+                        className={cn(
+                            `inline-block rounded-2xl border border-gray-600 px-3 py-3 text-sm font-medium text-white hover:bg-transparent focus:outline-none`
+                        )}
+                    >
+                        我的博客
+                    </button>
+                </Link>
+                <Link href={PATHS.SITE_ABOUT}>
+                    <button
+                        className={cn(
+                            `inline-block rounded-2xl border border-gray-600 px-3 py-3 text-sm font-medium text-white hover:bg-transparent focus:outline-none`
+                        )}
+                    >
+                        关于我
+                    </button>
+                </Link>
             </div>
-
-            {/* <ul
-        className={cn("flex space-x-4", "animate-fade-up animate-ease-in-out")}
-        style={{
-          animationDelay: `${getDelay()}ms`,
-        }}
-      >
-        {socialMediaList.map((el) => (
-          <li key={el.link}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button asChild variant="outline" size="icon">
-                  <Link href={el.link} target="_blank">
-                    {el.icon}
-                  </Link>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>{el.label}</TooltipContent>
-            </Tooltip>
-          </li>
-        ))}
-      </ul> */}
+            <ul
+                className={cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')}
+                style={{
+                    animationDelay: `${getDelay()}ms`
+                }}
+            >
+                {socialMediaList.map((el) => (
+                    <li key={el.link}>
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Button asChild variant="outline" size="icon">
+                                    <Link href={el.link} target="_blank">
+                                        {el.icon}
+                                    </Link>
+                                </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>{el.label}</TooltipContent>
+                        </Tooltip>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
