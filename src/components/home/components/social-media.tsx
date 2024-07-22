@@ -18,6 +18,26 @@ const socialMediaList: Array<{
         label: 'Github',
         link: GITHUB_PAGE
     },
+    // {
+    //     icon: <IconBrandGithub className="text-2xl" />,
+    //     label: 'Youtube',
+    //     link: GITHUB_PAGE
+    // },
+    // {
+    //     icon: <IconBrandGithub className="text-2xl" />,
+    //     label: 'Weixin_Official',
+    //     link: GITHUB_PAGE
+    // },
+    // {
+    //     icon: <IconBrandGithub className="text-2xl" />,
+    //     label: 'Gitee',
+    //     link: GITHUB_PAGE
+    // },
+    // {
+    //     icon: <IconBrandGithub className="text-2xl" />,
+    //     label: 'Twitter',
+    //     link: GITHUB_PAGE
+    // },
     {
         icon: (
             <>
