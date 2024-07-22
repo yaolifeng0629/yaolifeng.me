@@ -6,12 +6,10 @@ export * from './path';
 
 export * from './regex';
 
-// export * from "./unknown";
-
 export * from './pagination';
 
 export * from './error';
 
 export * from './assets';
 
-// export * from "./meilisearch";
+export * from './meilisearch';
