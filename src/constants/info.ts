@@ -7,6 +7,18 @@ export const NICKNAME = 'Immerse';
 /** Github 个人页 */
 export const GITHUB_PAGE = 'https://github.com/yaolifeng0629';
 
+// YouTube 个人页
+export const YOUTUBE = '';
+
+// Twitter 个人页
+export const TWITTER = '';
+
+// Gitee 个人页
+export const GITEE = '';
+
+// 微信公众号
+export const WEIXIN_OFFICIAL = '';
+
 /** 网站代码 Github 地址 */
 export const SOURCE_CODE_GITHUB_PAGE = 'https://github.com/yaolifeng0629/yaolifeng.me';
 
