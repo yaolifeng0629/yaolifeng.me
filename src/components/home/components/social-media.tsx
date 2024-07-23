@@ -2,6 +2,10 @@ import {
     IconBrandBilibili,
     IconBrandGithub,
     IconLogoJuejin,
+    IconsLogoGitee,
+    IconLogoTwitter,
+    IconLogoYoutube,
+    IconLogoWeChat,
     IconSkillGmailDark,
     IconSkillGmailLight
 } from '@/components/icons';
@@ -15,29 +19,29 @@ const socialMediaList: Array<{
 }> = [
     {
         icon: <IconBrandGithub className="text-2xl" />,
-        label: 'Github',
+        label: 'Github(yaolifeng0629)',
         link: GITHUB_PAGE
     },
-    // {
-    //     icon: <IconBrandGithub className="text-2xl" />,
-    //     label: 'Youtube',
-    //     link: GITHUB_PAGE
-    // },
-    // {
-    //     icon: <IconBrandGithub className="text-2xl" />,
-    //     label: 'Weixin_Official',
-    //     link: GITHUB_PAGE
-    // },
-    // {
-    //     icon: <IconBrandGithub className="text-2xl" />,
-    //     label: 'Gitee',
-    //     link: GITHUB_PAGE
-    // },
-    // {
-    //     icon: <IconBrandGithub className="text-2xl" />,
-    //     label: 'Twitter',
-    //     link: GITHUB_PAGE
-    // },
+    {
+        icon: <IconLogoYoutube className="text-2xl" />,
+        label: 'Youtube(Immerse)',
+        link: GITHUB_PAGE
+    },
+    {
+        icon: <IconLogoWeChat className="text-2xl" />,
+        label: 'WeChat(15829485647)',
+        link: GITHUB_PAGE
+    },
+    {
+        icon: <IconsLogoGitee className="text-2xl" />,
+        label: 'Gitee(yaolifeng0529)',
+        link: GITHUB_PAGE
+    },
+    {
+        icon: <IconLogoTwitter className="text-2xl" />,
+        label: 'Twitter(Immerse_code)',
+        link: GITHUB_PAGE
+    },
     {
         icon: (
             <>
@@ -45,17 +49,17 @@ const socialMediaList: Array<{
                 <IconSkillGmailLight className="hidden text-2xl dark:inline-block" />
             </>
         ),
-        label: 'Gmail',
+        label: 'Gmail(yaolifeng666@gmail.com)',
         link: `mailto:${EMAIL}`
     },
     {
         icon: <IconBrandBilibili className={`text-2xl text-[#00AEEC]`} />,
-        label: 'Bilibili',
+        label: 'Bilibili(Immerse_001)',
         link: BILIBILI_PAGE
     },
     {
         icon: <IconLogoJuejin className={`text-2xl text-[#2985fc]`} />,
-        label: '掘金',
+        label: '掘金(Immerse)',
         link: JUEJIN_PAGE
     }
 ];

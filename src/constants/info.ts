@@ -8,16 +8,16 @@ export const NICKNAME = 'Immerse';
 export const GITHUB_PAGE = 'https://github.com/yaolifeng0629';
 
 // YouTube 个人页
-export const YOUTUBE = '';
+export const YOUTUBE = 'https://www.youtube.com/channel/UCTcYdMnMZtdyuOyxMj6OJnA';
 
 // Twitter 个人页
-export const TWITTER = '';
+export const TWITTER = 'https://x.com/Immerse_code';
 
 // Gitee 个人页
-export const GITEE = '';
+export const GITEE = 'https://gitee.com/yaolifeng0529';
 
 // 微信公众号
-export const WEIXIN_OFFICIAL = '';
+export const WEIXIN_OFFICIAL = 'https://mp.weixin.qq.com/s/xui2UBEtkJc46Q-ImWrv8g';
 
 /** 网站代码 Github 地址 */
 export const SOURCE_CODE_GITHUB_PAGE = 'https://github.com/yaolifeng0629/yaolifeng.me';
