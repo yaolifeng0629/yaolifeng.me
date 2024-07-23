@@ -1,9 +1,5 @@
-import { NextPage } from 'next';
+// import { PostList } from './post-list';
 
-interface Props {}
-
-const Page: NextPage<Props> = ({}) => {
-    return <div>Blog</div>;
-};
-
-export default Page;
+export default async function HomePage() {
+    // return <PostList />;
+}
