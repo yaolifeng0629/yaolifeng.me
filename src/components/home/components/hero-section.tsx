@@ -35,7 +35,7 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                {NICKNAME}
+                {NICKNAME}(Immerse)
             </strong>
             <div
                 className={cn('animate-fade-up animate-ease-in-out')}
