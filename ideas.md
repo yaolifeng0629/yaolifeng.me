@@ -100,3 +100,4 @@ Personal Website
     ```sh
     npm install highlight.js
     ```
+-   搜索索引：https://x.com/vikingmute/status/1817012925934240163
