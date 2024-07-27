@@ -1,4 +1,7 @@
 import { type ClassValue, clsx } from 'clsx';
+import dayjs from 'dayjs';
+import 'dayjs/locale/zh-cn';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import slugify from 'slugify';
 import { twMerge } from 'tailwind-merge';
 
@@ -50,6 +53,26 @@ export const copyToClipboard = (text: string) => {
     }
 };
 
+export const isBrowser = () => {
+    // 代码来自：https://ahooks.js.org/zh-CN/guide/blog/ssr
+    /* eslint-disable @typescript-eslint/prefer-optional-chain */
+    return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+};
+
+dayjs.extend(relativeTime);
+
+export const toFromNow = (date: number | Date) => {
+    return dayjs(date).locale('zh-cn').fromNow();
+};
+
+export const toSlashDateString = (date: number | Date) => {
+    return dayjs(date).locale('zh-cn').format('YYYY年M月D日 dddd HH:mm:ss');
+};
+
+export const prettyDate = (date: number | Date) => {
+    return dayjs(date).locale('zh-cn').format('M月 D，YYYY');
+};
+
 /* 根据当前时间显示不同的问候语 */
 export const sayHi = () => {
     const hour = dayjs().hour();
@@ -71,8 +94,10 @@ export const sayHi = () => {
     }
 };
 
-export const isBrowser = () => {
-    // 代码来自：https://ahooks.js.org/zh-CN/guide/blog/ssr
-    /* eslint-disable @typescript-eslint/prefer-optional-chain */
-    return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+export const prettyDateWithWeekday = (date: number | Date) => {
+    return dayjs(date).locale('zh-cn').format('dddd，MMMM D YYYY');
+};
+
+export const isAdmin = (email?: string | null) => {
+    return false;
 };

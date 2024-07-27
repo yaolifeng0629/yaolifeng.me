@@ -4,7 +4,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "next dev -p 9268",
+        "dev": "next dev -p 3000",
         "build": "cross-env ANALYZE=true next build",
         "start": "next start -p 3001",
         "test": "vitest run",
@@ -34,7 +34,11 @@
         "@radix-ui/react-tooltip": "^1.0.7",
         "@radix-ui/react-toast": "^1.1.5",
         "@radix-ui/react-slot": "^1.0.2",
-        "class-variance-authority": "^0.7.0"
+        "class-variance-authority": "^0.7.0",
+        "lucide-react": "^0.378.0",
+        "lodash-es": "^4.17.21",
+        "dayjs": "^1.11.10",
+        "zod": "^3.22.4"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.3.0",

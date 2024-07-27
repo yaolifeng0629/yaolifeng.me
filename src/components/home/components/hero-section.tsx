@@ -35,7 +35,19 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                {NICKNAME}(Immerse)
+                {NICKNAME}
+                <strong
+                    className={cn(
+                        `text-3xl md:text-5xl tracking-widest font-black  bg-clip-text  custom-strong bg-gradient-to-r from-cyan-400 to-blue-500`,
+                        'animate-fade-up animate-ease-in-out'
+                    )}
+                    style={{
+                        WebkitTextFillColor: 'transparent',
+                        animationDelay: `${getDelay()}ms`
+                    }}
+                >
+                    &nbsp;\ Immerse
+                </strong>
             </strong>
             <div
                 className={cn('animate-fade-up animate-ease-in-out')}
