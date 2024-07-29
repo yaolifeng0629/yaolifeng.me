@@ -13,11 +13,9 @@ export async function generateMetadata({
     params: { slug: string };
 }): Promise<Metadata> {
     // const { blog } = await getPublishedBlogBySlug(params.slug);
-
     // if (isNil(blog)) {
     //     return {};
     // }
-
     // return {
     //     title: `${blog.title} - ${WEBSITE}`,
     //     description: blog.description,
