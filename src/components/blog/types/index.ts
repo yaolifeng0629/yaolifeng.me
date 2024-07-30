@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { PUBLISHED_ENUM, REGEX } from '@/constants';
+import { REGEX } from '@/constants';
 
 export const createBlogSchema = z.object({
     title: z.string().min(1, { message: '长度不能少于1个字符' }),
@@ -26,9 +26,6 @@ export const getBlogsSchema = z.object({
     title: z.string().optional(),
     slug: z.string().optional(),
     published: z.boolean().optional(),
-    // published: z
-    // .enum([PUBLISHED_ENUM.ALL, PUBLISHED_ENUM.PUBLISHED, PUBLISHED_ENUM.NO_PUBLISHED])
-    // .optional(),
     tags: z.string().array().optional(),
     pageIndex: z.number(),
     pageSize: z.number(),
@@ -40,4 +37,4 @@ export type CreateBlogDTO = z.infer<typeof createBlogSchema>;
 export type UpdateBlogDTO = z.infer<typeof updateBlogSchema>;
 export type GetBlogsDTO = z.infer<typeof getBlogsSchema>;
 
-export type Blog = [];
+export type Blog = any;

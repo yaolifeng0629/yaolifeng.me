@@ -1,37 +1,40 @@
-import { IllustrationNoContent } from '@/components/illustrations';
+// import { Key } from 'react';
 
-import { type Blog } from '../types';
+// import { IllustrationNoContent } from '@/components/illustrations';
 
-import { BlogListItem } from './blog-list-item';
+// import { type Blog } from '../types';
 
-type BlogListProps = {
-    blogs: Blog[];
-    uvMap?: Record<string, number>;
-};
+// import { BlogListItem } from './blog-list-item';
 
-export const BlogList = ({ blogs, uvMap }: BlogListProps) => {
-    if (!blogs.length) {
-        return (
-            <div className="grid place-content-center gap-8">
-                <IllustrationNoContent className="size-[30vh]" />
-                <h3 className="text-center text-2xl font-semibold tracking-tight">暂无Blog</h3>
-            </div>
-        );
-    }
+// type BlogListProps = {
+//     blog: never;
+// };
 
+export const BlogList = () => {
+    // if (!blogs.length) {
+    //     return (
+    //         <div className="grid place-content-center gap-8">
+    //             <IllustrationNoContent className="size-[30vh]" />
+    //             <h3 className="text-center text-2xl font-semibold tracking-tight">暂无Blog</h3>
+    //         </div>
+    //     );
+    // }
+
+    // console.log('blogs ---->', blogs);
     return (
-        <ul className="grid grid-cols-1 gap-10 md:grid-cols-2">
-            {blogs.map((el, idx) => (
-                <li
-                    key={el.id}
-                    className="animate-fade-up animate-ease-in-out"
-                    style={{
-                        animationDelay: `${(idx + 1) * 200}ms`
-                    }}
-                >
-                    <BlogListItem blog={el} uvMap={uvMap} />
-                </li>
-            ))}
-        </ul>
+        <div>blog list</div>
+        // <ul className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        //     {blogs.map((el: { id: Key | null | undefined }, idx: number) => (
+        //         <li
+        //             key={el.id}
+        //             className="animate-fade-up animate-ease-in-out"
+        //             style={{
+        //                 animationDelay: `${(idx + 1) * 200}ms`
+        //             }}
+        //         >
+        //             <BlogListItem blog={el} uvMap={uvMap} />
+        //         </li>
+        //     ))}
+        // </ul>
     );
 };

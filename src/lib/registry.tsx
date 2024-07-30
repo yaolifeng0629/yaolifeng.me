@@ -1,24 +1,28 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 
 import { useServerInsertedHTML } from 'next/navigation';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
-export default function StyledComponentsRegistry({ children }: { children: React.ReactNode }) {
-    const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet());
+// Assuming there's a context or a higher-order component that properly manages the lifecycle of `serverStyleSheet`
+const serverStyleSheet = new ServerStyleSheet();
 
+export default function StyledComponentsRegistry({ children }: { children: React.ReactNode }) {
     useServerInsertedHTML(() => {
-        const styles = styledComponentsStyleSheet.getStyleElement();
-        styledComponentsStyleSheet.instance.clearTag();
+        const styles = serverStyleSheet.getStyleElement();
+        // This might be moved to a more appropriate place for cleanup
         return <>{styles}</>;
-    });
+    }, []);
+
+    useEffect(() => {
+        // Cleanup function for client-side only
+        return () => {
+            serverStyleSheet.seal();
+        };
+    }, []);
 
     if (typeof window !== 'undefined') return <>{children}</>;
 
-    return (
-        <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
-            {children}
-        </StyleSheetManager>
-    );
+    return <StyleSheetManager sheet={serverStyleSheet.instance}>{children}</StyleSheetManager>;
 }
