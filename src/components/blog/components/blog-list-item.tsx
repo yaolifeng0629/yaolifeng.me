@@ -2,7 +2,8 @@ import React from 'react';
 
 import { Calendar } from 'lucide-react';
 import Link from 'next/link';
-import Tag from '@/components/tag'
+
+import Tag from '@/components/tag';
 
 import { type Blog } from '../types';
 
@@ -34,11 +35,9 @@ export const BlogListItem = ({ blog, uvMap }: BlogListItemProps) => {
                 </div>
                 <div className="flex h-5 items-center space-x-1">
                     <ul className="mb-1 flex space-x-4 text-xs font-medium text-muted-foreground">
-                        {blog.tags.map((tag) => (
-                            <li key={tag.id} className="flex items-center">
+                        {blog.tags.map((tag: string, index: React.Key | null | undefined) => (
+                            <li key={index} className="flex items-center">
                                 <Tag text={tag} />
-                                {/* <span className="mr-1">#&nbsp;{tag}</span> */}
-                                {/* <TagPrefixIcon tag={tag} /> */}
                             </li>
                         ))}
                     </ul>
