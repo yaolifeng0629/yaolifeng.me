@@ -19,10 +19,12 @@ export default function RootLayout({
 }>) {
     return (
         <html>
-            <body>
+            <body className="flex flex-col items-center">
                 <StyledComponentsRegistry>
                     <Navbar />
-                    <main className="min-h-[calc(100vh-160px)]">{children}</main>
+                    <main className="min-h-[calc(100vh-160px)] max-w-screen-md 2xl:max-w-7xl flex flex-col justify-center items-center">
+                        {children}
+                    </main>
                     <Favicon />
                     <Console />
                 </StyledComponentsRegistry>

@@ -4,7 +4,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "next dev -p 3000",
+        "dev": "next dev -p 9528",
         "build": "cross-env ANALYZE=true next build",
         "start": "next start -p 3001",
         "test": "vitest run",
@@ -26,6 +26,7 @@
         "@radix-ui/react-slot": "^1.0.2",
         "@radix-ui/react-toast": "^1.1.5",
         "@radix-ui/react-tooltip": "^1.0.7",
+        "@radix-ui/themes": "^3.1.1",
         "ahooks": "^3.7.10",
         "axios": "^1.7.2",
         "bytemd": "^1.21.0",

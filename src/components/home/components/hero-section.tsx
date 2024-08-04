@@ -16,7 +16,7 @@ const HeroSection = () => {
     const getDelay = () => (delay += 200);
 
     return (
-        <div className="flex min-h-full  max-w-screen-md flex-col justify-center gap-5 px-6 md:px-10 2xl:max-w-7xl">
+        <div className="flex flex-col justify-center gap-5 px-6 md:px-10 ">
             <p
                 className="animate-fade-up text-2xl tracking-widest animate-ease-in-out md:text-5xl"
                 style={{
@@ -46,7 +46,7 @@ const HeroSection = () => {
                         animationDelay: `${getDelay()}ms`
                     }}
                 >
-                    &nbsp;\ Immerse
+                    &nbsp;| Immerse
                 </strong>
             </strong>
             <div

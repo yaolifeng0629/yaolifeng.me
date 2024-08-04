@@ -20,9 +20,8 @@ export const BlogList = ({ blogs }) => {
         );
     }
 
-    console.log('blogs ---->', blogs);
     return (
-        <ul className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 border-blue-700">
             {blogs.map((el: { id: Key | null | undefined }, idx: number) => (
                 <li
                     key={el.id}
@@ -31,7 +30,7 @@ export const BlogList = ({ blogs }) => {
                         animationDelay: `${(idx + 1) * 200}ms`
                     }}
                 >
-                    <BlogListItem blog={el} uvMap={0} />
+                    <BlogListItem blog={el} />
                 </li>
             ))}
         </ul>
