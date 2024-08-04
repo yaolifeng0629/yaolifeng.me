@@ -13,7 +13,7 @@ export default function StyledComponentsRegistry({ children }: { children: React
         const styles = serverStyleSheet.getStyleElement();
         // This might be moved to a more appropriate place for cleanup
         return <>{styles}</>;
-    }, []);
+    });
 
     useEffect(() => {
         // Cleanup function for client-side only

@@ -47,7 +47,7 @@ export const copyToClipboard = (text: string) => {
         textarea.select();
         // 复制
         document.execCommand('copy', true);
-        showSuccessToast('已复制到粘贴板');
+        // showSuccessToast('已复制到粘贴板');
         // 移除输入框
         document.body.removeChild(textarea);
     }
