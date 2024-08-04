@@ -2,55 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'bytemd/dist/index.css';
-@import './bytemd.css';
-@import './github.css';
-@import './github-dark.css';
+@layer components {
+    .border-border {
+        border-color: var(--border);
+    }
+}
 
 @layer base {
     :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 3.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
-        --primary: 0 0% 9%;
-        --primary-foreground: 0 0% 98%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
-        --radius: 1rem;
-    }
-
-    .dark {
-        --background: 0 0% 3.9%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
+        --background: #08080a;
+        --foreground: #ffffff;
+        --card: #08080a;
+        --card-foreground: #ffffff;
+        --popover: #08080a;
+        --popover-foreground: #ffffff;
+        --primary: #ffffff;
+        --primary-foreground: #090909;
+        --secondary: #232329;
+        --secondary-foreground: #ffffff;
+        --muted: #232329;
+        --muted-foreground: #a1a1c3;
+        --accent: #232329;
+        --accent-foreground: #ffffff;
+        --destructive: #d63030;
+        --destructive-foreground: #ffffff;
+        --border: #232329;
+        --input: #232329;
+        --ring: #d1d1ff;
+        --selection-color: rgb(0, 0, 0);
+        --selection-background: rgb(255, 239, 92);
     }
 
     *,
@@ -59,31 +39,31 @@
         @apply border-border;
     }
 
+    html,
     body {
-        @apply bg-background text-foreground antialiased;
-        font-feature-settings:
-            'rlig' 1,
-            'calt' 1;
+        @apply w-full h-full antialiased;
+        background-color: var(--background);
+        color: var(--foreground);
     }
 }
-/* 适配 shiki 深色模式 */
-html.dark .shiki,
-html.dark .shiki span {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-    font-style: var(--shiki-dark-font-style) !important;
-    font-weight: var(--shiki-dark-font-weight) !important;
-    text-decoration: var(--shiki-dark-text-decoration) !important;
-}
-
 /* 选中文本样式 */
 ::selection,
+strong::selection,
 .search-result__item em {
-    color: rgb(0, 0, 0);
-    background: rgb(255, 239, 92);
-    -webkit-text-fill-color: unset !important;
+    color: var(--selection-color);
+    background: var(--selection-background);
+    -webkit-text-fill-color: unset;
+    background-image: none;
 }
 
+/* 修复首页 NickName 复制颜色失效问题 */
+/* Tips: 原因是 strong 标签内使用了 WebkitTextFillColor 属性，这个属性覆盖了 ::selection 伪元素定义的颜色 */
+.custom-strong::selection {
+    background-image: none !important;
+    color: var(--selection-color) !important;
+    background: var(--selection-background) !important;
+    -webkit-text-fill-color: rgb(0, 0, 0) !important;
+}
 /* 搜索结果 */
 .search-result__item em {
     @apply mx-1 font-normal not-italic;

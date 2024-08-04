@@ -11,7 +11,7 @@ import { NextLink } from '../next-link';
 
 import { navItems } from './config';
 
-import { NICKNAME, PATHS, SOURCE_CODE_GITHUB_PAGE, WEBSITE } from '@/constants';
+import { NICKNAME, PATHS, WEBSITE } from '@/constants';
 import { cn } from '@/lib/utils';
 
 export const Navbar = () => {
