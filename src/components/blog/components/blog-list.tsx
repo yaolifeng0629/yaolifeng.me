@@ -10,7 +10,7 @@ type BlogListProps = {
     blog: never;
 };
 
-export const BlogList = ({ blogs }) => {
+export const BlogList = ({ blogs }: Blog) => {
     if (!blogs.length) {
         return (
             <div className="grid place-content-center gap-8">
