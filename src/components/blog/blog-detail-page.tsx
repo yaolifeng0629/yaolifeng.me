@@ -13,10 +13,9 @@ import { cn, prettyDateWithWeekday } from '@/lib/utils';
 
 type BlogDetailProps = {
     blog: Blog;
-    uv?: number;
 };
 
-export const BlogDetailPage = ({ blog, uv = 0 }: BlogDetailProps) => {
+export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
     return (
         <Wrapper className="flex flex-col pt-8">
             <div>

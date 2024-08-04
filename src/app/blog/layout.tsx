@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: React.PropsWithChildren) {
-    return <div className="border border-red-700">{children}</div>;
+    return <>{children}</>;
 }

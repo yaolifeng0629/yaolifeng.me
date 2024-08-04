@@ -22,7 +22,7 @@ export default function RootLayout({
             <body className="flex flex-col items-center">
                 <StyledComponentsRegistry>
                     <Navbar />
-                    <main className="min-h-[calc(100vh-160px)] max-w-screen-md 2xl:max-w-7xl flex flex-col justify-center items-center">
+                    <main className="min-h-[calc(100vh-160px)] max-w-screen-md 2xl:max-w-7xl">
                         {children}
                     </main>
                     <Favicon />
