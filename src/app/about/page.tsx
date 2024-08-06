@@ -8,6 +8,8 @@ import {
     IconLogoGoogle,
     IconLogoRockyLinux,
     IconSkillCSS,
+    IconSkillVue,
+    IconSkillJquery,
     IconSkillDebianDark,
     IconSkillDebianLight,
     IconSkillDocker,
@@ -32,7 +34,6 @@ import {
     IconSkillTypeScript
 } from '@/components/icons';
 import { Button } from '@/components/ui/button';
-import { Wrapper } from '@/components/wrapper';
 
 import { NICKNAME } from '@/constants';
 
@@ -45,7 +46,7 @@ export default function Page() {
     const getDelay = () => (delay += 200);
 
     return (
-        <Wrapper className="flex flex-col px-6 pb-24 pt-8 prose prose-neutral dark:prose-invert">
+        <section className="w-screen-wrapper prose prose-invert max-w-none pb-48">
             <h2 className="text-3xl font-bold md:text-4xl">关于</h2>
             <div
                 className="animate-fade-up animate-ease-in-out"
@@ -56,7 +57,7 @@ export default function Page() {
                 <h2>我是谁</h2>
                 <p>
                     Hi~ 我是{NICKNAME}
-                    ，一名前端开发工程师，2020年大专毕业，喜欢 Coding 和打游戏
+                    ，一名前端开发工程师，喜欢 Coding 和 Immersion
                 </p>
             </div>
 
@@ -80,8 +81,14 @@ export default function Page() {
                     <li>
                         <IconSkillHTML className="mx-1 translate-y-0.5" /> HTML +
                         <IconSkillCSS className="mx-1 translate-y-0.5" />
-                        CSS + <IconSkillJavaScript className="mx-1 translate-y-0.5" />
-                        JavaScript ，熟练使用
+                        CSS + <IconSkillJquery className="mx-1 translate-y-0.5" />
+                        jQuery ，熟练使用
+                    </li>
+                    <li>
+                        <IconSkillVue className="mx-1 translate-y-0.5" /> Vue +
+                        <IconSkillTailwindcssDark className="mx-1 translate-y-0.5" />
+                        Tailwind CSS + <IconSkillJavaScript className="mx-1 translate-y-0.5" />
+                        JavaScript，熟练使用
                     </li>
                     <li>
                         <IconSkillTypeScript className="mx-1 translate-y-0.5" />
@@ -232,6 +239,6 @@ export default function Page() {
                     ))}
                 </ul>
             </div>
-        </Wrapper>
+        </section>
     );
 }
