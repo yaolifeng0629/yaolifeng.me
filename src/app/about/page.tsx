@@ -120,15 +120,15 @@ export default function Page() {
                 <h3>后端</h3>
                 <ul>
                     <li>
+                        <IconSkillJava className="mx-1 translate-y-0.5 dark:hidden" />
+                        Java，简单会一点点
+                    </li>
+                    <li>
                         <>
                             <IconSkillNodejsDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillNodejsLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
                         </>
                         Node.js，简单 CRUD 水平
-                    </li>
-                    <li>
-                        <IconSkillJava className="mx-1 translate-y-0.5 dark:hidden" />
-                        Java，简单会一点点
                     </li>
                     <li>
                         <>
@@ -153,7 +153,7 @@ export default function Page() {
                 <h3>其它</h3>
                 <ul>
                     <li>wezTerm + Fira Code，舒服的很</li>
-                    <li>
+                    {/* <li>
                         用过 <IconLogoCentOS className="mx-1 translate-y-0.5" />
                         CentOS、
                         <>
@@ -163,7 +163,7 @@ export default function Page() {
                         Debian、
                         <IconLogoRockyLinux className="mx-1 translate-y-0.5" />
                         Rocky Linux （最近使用）
-                    </li>
+                    </li> */}
                     <li>
                         <IconSkillDocker className="mx-1 translate-y-0.5" />
                         Docker +<span className="line-through">Docker Desktop 太卡了</span>+
@@ -211,14 +211,14 @@ export default function Page() {
                 <h2>我的设备</h2>
                 <ul>
                     <li>
-                        MacBook Pro 14-inch M3 Max：64G + 2TB，
-                        <span className="line-through">赚的几个窝囊费全花电子产品上去了</span>
+                        Colorful i7-13700HX/4060/2k Size：16G + 1TB，
+                        <span className="line-through">从最开始到现在的第二台笔记本</span>
                         🙃
                     </li>
-                    <li>微星（msi） GP76：64G + 1TB + RTX3070</li>
-                    <li>LG 27英寸 4K</li>
-                    <li>键盘：珂芝（KIZI）K75</li>
-                    <li>鼠标：罗技（G）PRO 2代</li>
+                    <li>七彩虹将星 x15：16G + 1TB + i7-13700HX/4060</li>
+                    <li>165HZ / 2K</li>
+                    <li>键盘：（ikbc）K108 红轴</li>
+                    <li>鼠标：罗技（G102紫色） 2代</li>
                 </ul>
             </div>
 

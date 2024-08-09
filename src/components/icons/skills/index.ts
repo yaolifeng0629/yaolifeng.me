@@ -1,6 +1,7 @@
 export * from './icon-skill-css';
 export * from './icon-skill-vue';
 export * from './icon-skill-jquery';
+export * from './icon-skill-java';
 export * from './icon-skill-debian';
 export * from './icon-skill-docker';
 export * from './icon-skill-figma';
