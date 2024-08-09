@@ -147,6 +147,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.2.2
         version: 19.2.2
+      '@iconify-json/devicon':
+        specifier: ^1.1.50
+        version: 1.1.50
       '@iconify/tailwind':
         specifier: ^0.1.4
         version: 0.1.4
@@ -635,6 +638,9 @@ packages:
   '@humanwhocodes/object-schema@2.0.3':
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
+
+  '@iconify-json/devicon@1.1.50':
+    resolution: {integrity: sha512-OPW1BoRu7QaOmLdmG/TxNAB0m5ltxiggaUrtzMVJv6GhPoygJVme1vsLr3p2sN7KngmVdZZEOMKqq5+Nb5NVxg==}
 
   '@iconify-json/fa6-brands@1.1.21':
     resolution: {integrity: sha512-NS/BszVo8fUVpzA7/5b9tmkHzisZSUlm8kjdznk1Bux5p5QH3BxHZXrZUM5QsT90/7+omQC0EKukwf7H7nujZg==}
@@ -5049,6 +5055,10 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/object-schema@2.0.3': {}
+
+  '@iconify-json/devicon@1.1.50':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/fa6-brands@1.1.21':
     dependencies:

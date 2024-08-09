@@ -10,6 +10,7 @@ import {
     IconSkillCSS,
     IconSkillVue,
     IconSkillJquery,
+    IconSkillJava,
     IconSkillDebianDark,
     IconSkillDebianLight,
     IconSkillDocker,
@@ -79,16 +80,15 @@ export default function Page() {
                 <h3>前端</h3>
                 <ul>
                     <li>
+                        <IconSkillVue className="mx-1 translate-y-0.5" /> Vue +
+                        <IconSkillJavaScript className="mx-1 translate-y-0.5" />
+                        JavaScript，熟练使用
+                    </li>
+                    <li className="flex items-center">
                         <IconSkillHTML className="mx-1 translate-y-0.5" /> HTML +
                         <IconSkillCSS className="mx-1 translate-y-0.5" />
                         CSS + <IconSkillJquery className="mx-1 translate-y-0.5" />
                         jQuery ，熟练使用
-                    </li>
-                    <li>
-                        <IconSkillVue className="mx-1 translate-y-0.5" /> Vue +
-                        <IconSkillTailwindcssDark className="mx-1 translate-y-0.5" />
-                        Tailwind CSS + <IconSkillJavaScript className="mx-1 translate-y-0.5" />
-                        JavaScript，熟练使用
                     </li>
                     <li>
                         <IconSkillTypeScript className="mx-1 translate-y-0.5" />
@@ -102,7 +102,7 @@ export default function Page() {
                             <IconSkillNextjsDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillNextjsLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
                         </>
-                        Next.js + ahooks +
+                        Next.js +
                         <>
                             <IconSkillTailwindcssDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillTailwindcssLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
@@ -124,15 +124,18 @@ export default function Page() {
                             <IconSkillNodejsDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillNodejsLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
                         </>
-                        Node.js，能简单 CRUD 水平
+                        Node.js，简单 CRUD 水平
+                    </li>
+                    <li>
+                        <IconSkillJava className="mx-1 translate-y-0.5 dark:hidden" />
+                        Java，简单会一点点
                     </li>
                     <li>
                         <>
                             <IconSkillNextjsDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillNextjsLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
                         </>
-                        Next.js + <IconSkillPrisma className="mx-1 translate-y-0.5" />
-                        Prisma +
+                        Next.js +
                         <>
                             <IconSkillMysqlDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillMysqlLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
@@ -149,7 +152,7 @@ export default function Page() {
             >
                 <h3>其它</h3>
                 <ul>
-                    <li>Zsh + Oh My Zsh + iTerm2 + Mononoki Nerd Font Mono，舒服的很</li>
+                    <li>wezTerm + Fira Code，舒服的很</li>
                     <li>
                         用过 <IconLogoCentOS className="mx-1 translate-y-0.5" />
                         CentOS、
