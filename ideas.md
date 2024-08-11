@@ -17,6 +17,8 @@ Personal Website
     -   [Github](https://github.com/Innei/Shiro)
     -   [Official Website](https://innei.in/)
 
+-   背景：https://www.eldoraui.site/components/sections/particles
+-   牌子：https://www.eldoraui.site/components/special-animations/tag
 ### 目前想法
 
 1.  首页参考 fuxiaocheng 主页
