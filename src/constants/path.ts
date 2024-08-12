@@ -4,7 +4,7 @@ export const PATHS = {
     /** ************* SITE ****************** */
     SITE_HOME: '/',
     SITE_BLOG: '/blog',
-    SITE_SNIPPET: '/snippet',
+    SITE_SNIPPET: '/shorts',
     SITE_ABOUT: '/about',
     SITEMAP: '/sitemap.xml',
 

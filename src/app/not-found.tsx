@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function NotFound() {
     return (
-        <div className="min-w-screen-wrapper h-full place-content-center px-4">
+        <div className="min-w-screen-wrapper h-full place-content-center px-4 flex items-center flex-col">
             <h1 className="uppercase tracking-widest text-gray-500">404 | Not Found</h1>
             <Link
                 href="/"
