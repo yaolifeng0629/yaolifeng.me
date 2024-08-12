@@ -21,7 +21,7 @@ export const BlogListItem = ({ blog, uvMap }: BlogListItemProps) => {
             href={`${PATHS.SITE_BLOG}/${blog.slug}`}
             className={cn(
                 'flex flex-col justify-between h-full text-primary px-6 py-4 transition-colors rounded-lg',
-                'bg-transparent hover:bg-primary-foreground '
+                'bg-transparent hover:bg-primary-foreground'
             )}
         >
             <h4 className="mb-2 line-clamp-1 text-xl font-medium">{blog.title}</h4>
