@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BytemdViewer } from '@/components/bytemd';
 import { DetailSidebar } from '@/components/detail-sidebar';
 import { MarkdownTOC } from '@/components/markdown-toc';
+import Tag from '@/components/tag';
 import { Wrapper } from '@/components/wrapper';
 
 import { type Blog } from './types';
@@ -38,17 +39,21 @@ export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
             <p className="py-4 text-neutral-500">{shorts.description}</p>
 
             <div className="flex">
-                <div
-                    className={cn(
-                        'flex-1',
-                        'wrapper:border-r wrapper:border-r-border wrapper:pr-14'
-                    )}
-                >
+                <div className={cn('flex-1', 'border-r border-r-[#2f2f2f] wrapper:pr-14')}>
                     <BytemdViewer body={shorts.content || ''} />
                 </div>
                 <DetailSidebar>
                     <MarkdownTOC />
                 </DetailSidebar>
+            </div>
+            <div className="flex h-5 items-center space-x-1">
+                <ul className="mb-1 flex space-x-4 text-xs font-medium text-muted-foreground">
+                    {blog.tags.map((tag: string, index: React.Key | null | undefined) => (
+                        <li key={index} className="flex items-center">
+                            <Tag text={tag} />
+                        </li>
+                    ))}
+                </ul>
             </div>
         </Wrapper>
     );
