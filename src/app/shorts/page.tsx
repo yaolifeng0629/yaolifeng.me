@@ -23,23 +23,23 @@ const Page: NextPage = async () => {
 };
 
 function ShortItem({ short }: { short: Short }) {
-    const photo = short.attachments?.at(0)?.address;
+    const photo = short.url;
     if (!photo) return null;
 
     return (
-        <Card size="2" className="border border-gray-700 rounded-lg p-0 overflow-hidden">
+        <Card size="2" className="border border-[#2f2f2f] rounded-lg p-0 overflow-hidden">
             <Link href={`/shorts/${short.slug}`} className="flex flex-col">
                 <Inset clip="padding-box" side="top" pb="current">
                     <Image
                         src={photo}
-                        alt={short.content}
+                        alt={short.title}
                         width={300}
                         height={200}
                         layout="responsive"
                     />
                 </Inset>
                 <Text as="p" size="3" className="px-3 py-3 text-gray-50">
-                    {short.title || short.content}
+                    {short.title || short.description}
                 </Text>
             </Link>
         </Card>

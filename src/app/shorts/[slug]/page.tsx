@@ -1,18 +1,18 @@
 import { isNil } from 'lodash-es';
 import { notFound } from 'next/navigation';
 
-import { BlogDetailPage } from '@/components/blog';
+import { ShortsDetailPage } from '@/components/shorts';
 
-import { getBlogBySlug } from '@/api/blogs';
+import { getShortBySlug } from '@/api/shorts';
 
 export const revalidate = 60;
 
 export default async function Page({ params }: { params: { slug: string } }) {
-    const blog = await getBlogBySlug(params.slug);
+    const shorts = await getShortBySlug(params.slug);
 
-    if (isNil(blog)) {
+    if (isNil(shorts)) {
         return notFound();
     }
 
-    return <BlogDetailPage blog={blog} />;
+    return <ShortsDetailPage shorts={shorts} />;
 }

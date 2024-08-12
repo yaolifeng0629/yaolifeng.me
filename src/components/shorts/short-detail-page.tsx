@@ -12,30 +12,30 @@ import { PATHS } from '@/constants';
 import { cn, prettyDateWithWeekday } from '@/lib/utils';
 
 type BlogDetailProps = {
-    blog: Blog;
+    shorts: Blog;
 };
 
-export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
+export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
     return (
         <Wrapper className="flex flex-col pt-8">
             <div>
                 <Link
-                    href={PATHS.SITE_BLOG}
+                    href={PATHS.SITE_SNIPPET}
                     className={cn(
                         'text-sm flex items-center space-x-1 transition-colors py-2',
                         'text-muted-foreground hover:text-primary'
                     )}
                 >
                     <MoveLeft className="size-3.5" />
-                    <span>返回博客</span>
+                    <span>返回片段</span>
                 </Link>
             </div>
             <div className="flex items-center space-x-4 pb-4 pt-8 text-sm text-muted-foreground">
-                <p>发布于&nbsp;&nbsp;{prettyDateWithWeekday(blog.createdAt)}</p>
+                <p>发布于&nbsp;&nbsp;{prettyDateWithWeekday(shorts.createdAt)}</p>
             </div>
-            <h1 className="break-all py-6 text-4xl font-semibold">{blog.title}</h1>
+            <h1 className="break-all py-6 text-4xl font-semibold">{shorts.title}</h1>
 
-            <p className="py-4 text-neutral-500">{blog.description}</p>
+            <p className="py-4 text-neutral-500">{shorts.description}</p>
 
             <div className="flex">
                 <div
@@ -44,7 +44,7 @@ export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
                         'wrapper:border-r wrapper:border-r-border wrapper:pr-14'
                     )}
                 >
-                    <BytemdViewer body={blog.content || ''} />
+                    <BytemdViewer body={shorts.content || ''} />
                 </div>
                 <DetailSidebar>
                     <MarkdownTOC />
