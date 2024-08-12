@@ -16,7 +16,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'www.test.com'
+                hostname: 'qncdn.mopic.mozigu.net'
             }
         ]
     },

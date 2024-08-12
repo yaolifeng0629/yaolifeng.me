@@ -5,7 +5,7 @@ import { Wrapper } from '@/components/wrapper';
 
 import { getBlogs } from '@/api/blogs';
 
-export const revalidate = 60; // 设置重新验证时间为60秒
+export const revalidate = 60;
 
 export default async function Page() {
     const blogs = await getBlogs();

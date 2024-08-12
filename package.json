@@ -36,6 +36,7 @@
         "dayjs": "^1.11.10",
         "hast-util-from-html-isomorphic": "^2.0.0",
         "highlight.js": "^11.9.0",
+        "image-size": "^1.1.1",
         "immer": "^10.1.1",
         "lodash-es": "^4.17.21",
         "lowlight": "^3.1.0",
