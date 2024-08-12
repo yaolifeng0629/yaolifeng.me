@@ -7,13 +7,13 @@ import { MarkdownTOC } from '@/components/markdown-toc';
 import Tag from '@/components/tag';
 import { Wrapper } from '@/components/wrapper';
 
-import { type Blog } from './types';
+import { type Blog as Shorts } from './types';
 
 import { PATHS } from '@/constants';
 import { cn, prettyDateWithWeekday } from '@/lib/utils';
 
 type BlogDetailProps = {
-    shorts: Blog;
+    shorts: Shorts;
 };
 
 export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
