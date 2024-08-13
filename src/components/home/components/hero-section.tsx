@@ -12,7 +12,6 @@ import { cn } from '@/lib/utils';
 const HeroSection = () => {
     let delay = 0;
 
-    // 每次调用，增加延时
     const getDelay = () => (delay += 200);
 
     return (

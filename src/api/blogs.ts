@@ -15,8 +15,8 @@ export async function getBlogs() {
             createdAt: new Date().getTime(),
             title: 'Xcode 上传 app 时报错：You do not have required contracts to perform an operation',
             description:
-                '使用 Xcode 构建完 app 后，上传到 TestFlight 时突然报错 You do not have required contracts to perform an operation，记录一下这个坑',
-            tags: ['Xcode', 'iOS', 'TestFlight'],
+                '使用 Xcode 构建完 app 后，上传到 TestFlight 时突然报错 You do not have required contracts to perform an operation，记录一下这个坑Xcode 构建完 app 后，上传到 TestFlight 时突然报错 You do not have required contracts to perform an operation，记录一下这个坑',
+            tags: ['Xcode', 'iOS', 'TestFlight', 'Testing'],
             content:
                 '## Xcode 上传 app 错误解决方案\n\n在使用 Xcode 上传 app 到 TestFlight 时遇到了以下错误：\n\n...'
         }

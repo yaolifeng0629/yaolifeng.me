@@ -70,7 +70,7 @@ export const toSlashDateString = (date: number | Date) => {
 };
 
 export const prettyDate = (date: number | Date) => {
-    return dayjs(date).locale('zh-cn').format('M月 D，YYYY');
+    return dayjs(date).locale('zh-cn').format('YYYY年 M月 D日');
 };
 
 /* 根据当前时间显示不同的问候语 */
