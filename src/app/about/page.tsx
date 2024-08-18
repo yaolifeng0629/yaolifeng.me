@@ -42,7 +42,7 @@ export default function Page() {
     const getDelay = () => (delay += 200);
 
     return (
-        <section className="w-screen-wrapper prose prose-invert max-w-none">
+        <section className="w-screen-wrapper prose prose-invert max-w-none px-6 pt-8">
             <h2 className="text-3xl font-bold md:text-4xl">关于</h2>
             <div
                 className="animate-fade-up animate-ease-in-out"

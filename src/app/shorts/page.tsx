@@ -12,8 +12,8 @@ const Page: NextPage = async () => {
 
     return (
         <>
-            <h2 className="pb-8 text-3xl font-bold md:text-4xl">最新片段</h2>
-            <Box my="4" className="columns-3xs space-y-4">
+            <h2 className="pb-8 text-3xl font-bold md:text-4xl px-6 pt-8">最新片段</h2>
+            <Box my="4" className="columns-3xs space-y-4 px-6">
                 {shorts.map((short) => (
                     <ShortItem key={short.slug} short={short} />
                 ))}
