@@ -225,7 +225,7 @@ export default function Page() {
             >
                 <h2>联系我</h2>
                 <p>你可以通过👇下面任意一种方式联系我</p>
-                <ul className="!mb-0 flex !list-none items-center space-x-4 !pl-0">
+                <ul className="!mb-0 flex !list-none items-center space-x-4 !pl-0 pb-20">
                     {SocialMedia.map((el) => (
                         <li key={el.link}>
                             <Button asChild variant="outline" size="icon">
