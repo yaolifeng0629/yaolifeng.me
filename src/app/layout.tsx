@@ -1,6 +1,7 @@
 import { Console } from '@/components/console';
 import { Favicon } from '@/components/favicon';
 import { Navbar } from '@/components/navbar';
+import Particles from '@/components/particles';
 
 import StyledComponentsRegistry from '@/lib/registry';
 
@@ -21,12 +22,14 @@ export default function RootLayout({
         <html>
             <body className="flex flex-col items-center">
                 <StyledComponentsRegistry>
-                    <Navbar />
-                    <main className="min-h-[calc(100vh-160px)] w-screen max-w-screen-md 2xl:max-w-7xl md:px-10">
-                        {children}
-                    </main>
-                    <Favicon />
-                    <Console />
+                    <Particles>
+                        <Navbar />
+                        <main className="min-h-[calc(100vh-160px)] w-screen max-w-screen-md 2xl:max-w-7xl md:px-10">
+                            {children}
+                        </main>
+                        <Favicon />
+                        <Console />
+                    </Particles>
                 </StyledComponentsRegistry>
             </body>
         </html>
