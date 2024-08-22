@@ -22,14 +22,13 @@ export default function RootLayout({
         <html>
             <body className="flex flex-col items-center">
                 <StyledComponentsRegistry>
-                    <Particles>
-                        <Navbar />
-                        <main className="min-h-[calc(100vh-160px)] w-screen max-w-screen-md 2xl:max-w-7xl md:px-10">
-                            {children}
-                        </main>
-                        <Favicon />
-                        <Console />
-                    </Particles>
+                    <Navbar />
+                    <main className="relative z-10 min-h-[calc(100vh-160px)] w-screen max-w-screen-md 2xl:max-w-7xl md:px-10">
+                        {children}
+                    </main>
+                    <Favicon />
+                    <Console />
+                    <Particles className="fixed inset-0 z-[1]" quantity={100} staticity={50} ease={50} />
                 </StyledComponentsRegistry>
             </body>
         </html>
