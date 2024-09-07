@@ -11,7 +11,7 @@ type Props = {
 export const Logo = ({ className }: Props) => {
     return (
         <>
-            <Image src={ImageAssets.logoLight} className={cn('w-8 h-8', className)} alt={WEBSITE} />
+            <Image src={ImageAssets.logoLight} width={32} height={32} className={cn('w-8 h-8', className)} alt={WEBSITE} />
             {/* <img
                 src={ImageAssets.logoDark}
                 className={cn('w-8 h-8 dark:hidden', className)}
