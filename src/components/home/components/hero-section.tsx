@@ -22,7 +22,7 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                Hi there, I'm
+                你好，我是
             </p>
             <strong
                 className={cn(
@@ -65,7 +65,7 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                Like&nbsp;
+                喜欢&nbsp;
                 <span className={`font-semibold text-[#45ca9d]`}>Vue</span>、
                 <span className={`font-semibold text-[#00d8ff]`}>React</span>、
                 {/* <span className={`font-semibold text-[#5bac47]`}>Node</span>、 */}
@@ -82,7 +82,7 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                Record your daily life here and strive 💪 to Become a simple and better yourself
+                在这里记录你的日常，努力成为一个简单、更好的自己💪
             </p>
             <div
                 className={cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')}
