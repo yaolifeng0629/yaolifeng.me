@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import { ImageAssets, WEBSITE } from '@/constants';
 import { cn } from '@/lib/utils';
@@ -10,7 +11,7 @@ type Props = {
 export const Logo = ({ className }: Props) => {
     return (
         <>
-            <img src={ImageAssets.logoLight} className={cn('w-8 h-8', className)} alt={WEBSITE} />
+            <Image src={ImageAssets.logoLight} className={cn('w-8 h-8', className)} alt={WEBSITE} />
             {/* <img
                 src={ImageAssets.logoDark}
                 className={cn('w-8 h-8 dark:hidden', className)}

@@ -37,7 +37,7 @@ export default function Particles({
         return () => {
             window.removeEventListener('resize', initCanvas);
         };
-    }, []);
+    });
 
     useEffect(() => {
         onMouseMove();

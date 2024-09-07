@@ -4,6 +4,7 @@ import gfm from '@bytemd/plugin-gfm';
 import gfm_zhHans from '@bytemd/plugin-gfm/lib/locales/zh_Hans.json';
 import highlightSSR from '@bytemd/plugin-highlight-ssr';
 import mediumZoom from '@bytemd/plugin-medium-zoom';
+
 import { type EditorProps } from '@bytemd/react';
 
 // highlight需要额外扩充的高亮语言

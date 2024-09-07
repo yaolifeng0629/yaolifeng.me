@@ -31,8 +31,12 @@ const instance: AxiosInstance = axios.create({
 
 // global loading default processing
 const defaultLoadingHandler: LoadingHandler = {
-    start: () => console.log('Loading started...'),
-    end: () => console.log('Loading ended...')
+    start: () => {
+        // console.log('Loading started...')
+    },
+    end: () => {
+        // console.log('Loading ended...')
+    }
 };
 
 let loadingHandler: LoadingHandler = defaultLoadingHandler;
@@ -56,10 +60,10 @@ instance.interceptors.request.use(
         // add auth info, examples: JWT Token request config
         const token = getToken();
         if (token) {
-            config.headers = {
-                ...config.headers,
-                Authorization: `Bearer ${token}`
-            };
+            // config.headers = Object.assign({}, config, {
+            //     ...config.headers,
+            //     Authorization: `Bearer ${token}`
+            // });
         }
         return config;
     },
