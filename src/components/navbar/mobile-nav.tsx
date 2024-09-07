@@ -22,7 +22,6 @@
 // import { SLOGAN, WEBSITE } from '@/constants';
 // import { cn } from '@/lib/utils';
 
-
 // export const MobileNav = () => {
 //     const pathname = usePathname();
 //     const [open, setOpen] = React.useState(false);

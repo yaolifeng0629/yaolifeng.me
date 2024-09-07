@@ -5,13 +5,13 @@ import gfm_zhHans from '@bytemd/plugin-gfm/lib/locales/zh_Hans.json';
 import highlightSSR from '@bytemd/plugin-highlight-ssr';
 import mediumZoom from '@bytemd/plugin-medium-zoom';
 import { type EditorProps } from '@bytemd/react';
-import { merge } from 'lodash-es';
-import { common } from 'lowlight';
 
 // highlight需要额外扩充的高亮语言
 import asciidoc from 'highlight.js/lib/languages/asciidoc';
 import dart from 'highlight.js/lib/languages/dart';
 import nginx from 'highlight.js/lib/languages/nginx';
+import { merge } from 'lodash-es';
+import { common } from 'lowlight';
 
 import { headingPlugin, prettyLinkPlugin } from './plugins';
 
