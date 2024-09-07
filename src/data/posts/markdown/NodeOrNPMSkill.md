@@ -1,6 +1,7 @@
 # NodeOrNPMSkill
 
-1.  `npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.`
+1.  `npm WARN config global `--global`, `--local`are deprecated. Use`--location=global` instead.`
+
 -   解决方法：
     1.  `window + r`: 输入 `cmd`
     2.  输入：`where npm`
@@ -10,6 +11,7 @@
     6.  重新启动终端即可
 
 ### 镜像源过期解决方法：
+
 ```bash
 1. 切换镜像源：
     npm config set registry https://registry.npmmirror.com
@@ -31,6 +33,7 @@
 ```
 
 ### 如何查看一个npm包的所有版本？
+
 ```bash
 查看所有版本：pnpm view [packageName] versions
 
@@ -38,11 +41,13 @@
 ```
 
 ### 如何安装指定的npm包版本？
+
 ```bash
 pnpm i [packageName]@[版本号]
 ```
 
 ### 如何查看一个npm包的版本号？
+
 ```bash
 查看所有版本：npm show [packageName] versions
 
@@ -50,16 +55,19 @@ pnpm i [packageName]@[版本号]
 ```
 
 ### 快速找到并打开 react 的文档
+
 ```bash
 npm docs react
 ```
 
 ### 快速找到并打开 react 的仓库
+
 ```bash
 npm repo react
 ```
 
 ### npm 如何删除不需要的包？
+
 ```sh
 npm prune
 pnpm prune

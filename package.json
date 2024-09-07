@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "next dev -p 9528",
-        "build": "cross-env ANALYZE=true next build",
+        "build": "next build",
         "start": "next start -p 3001",
         "test": "vitest run",
         "lint": "eslint --fix src",
