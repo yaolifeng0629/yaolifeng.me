@@ -28,12 +28,12 @@ export default function RootLayout({
                     </main>
                     <Favicon />
                     <Console />
-                    <Particles
+                    {/* <Particles
                         className="fixed inset-0 z-[1]"
                         quantity={100}
                         staticity={50}
                         ease={50}
-                    />
+                    /> */}
                 </StyledComponentsRegistry>
             </body>
         </html>
