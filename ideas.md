@@ -17,6 +17,9 @@ Personal Website
 
     -   [Github](https://github.com/Innei/Shiro)
     -   [Official Website](https://innei.in/)
+-   https://anyway.fm/
+    -   [Github](https://github.com/Anyway-Design/)
+    -   [Official Website](https://anyway.fm/)
 
 -   背景：https://www.eldoraui.site/components/sections/particles
 -   牌子：https://www.eldoraui.site/components/special-animations/tag
