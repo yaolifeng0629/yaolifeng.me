@@ -1,5 +1,8 @@
+'use client';
 import { MoveLeft } from 'lucide-react';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 
 import { BytemdViewer } from '@/components/bytemd';
 import { DetailSidebar } from '@/components/detail-sidebar';
@@ -17,6 +20,28 @@ type BlogDetailProps = {
 };
 
 export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
+    const [content, setContent] = useState<string | null>(null);
+
+    useEffect(() => {
+        const loadContent = async () => {
+            if (typeof blog.content === 'string' && blog.content.startsWith('import(')) {
+                const path = blog.content.slice(8, -2); // 移除 import(' 和 ')
+                try {
+                    const module = await import(`../../${path}`);
+                    const markdownContent = module.default;
+                    setContent(markdownContent);
+                } catch (error) {
+                    console.error('加载博客内容失败:', error);
+                    setContent('加载博客内容时出错。');
+                }
+            } else {
+                setContent(blog.content || '');
+            }
+        };
+
+        loadContent();
+    }, [blog.content]);
+
     return (
         <Wrapper className="flex flex-col pt-8">
             <div>
@@ -40,7 +65,7 @@ export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
 
             <div className="flex">
                 <div className={cn('flex-1', 'border-r border-r-[#2f2f2f] wrapper:pr-14')}>
-                    <BytemdViewer body={blog.content || ''} />
+                    {content ? <BytemdViewer body={content} /> : <p>加载中...</p>}
                 </div>
                 <DetailSidebar>
                     <MarkdownTOC />
