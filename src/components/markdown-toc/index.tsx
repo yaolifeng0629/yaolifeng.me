@@ -13,6 +13,7 @@ export const MarkdownTOC = () => {
 
     useMount(() => {
         const markdownBodyElement = document.querySelector('.markdown-body')!;
+        if (!markdownBodyElement) return;
         const $ = load(markdownBodyElement.innerHTML);
         const h2Elems = $('h2');
         for (const h2 of h2Elems) {

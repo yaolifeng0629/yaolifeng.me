@@ -1,39 +1,47 @@
 {
     "compilerOptions": {
-        "target": "es2015",
-        "downlevelIteration": true,
-        "lib": ["dom", "dom.iterable", "esnext"],
-        "allowJs": true,
-        "skipLibCheck": true,
-        "strict": false,
-        "noEmit": true,
+        /* Base Options: */
         "esModuleInterop": true,
-        "module": "esnext",
-        "moduleResolution": "bundler",
+        "skipLibCheck": true,
+        "target": "es2022",
+        "allowJs": true,
         "resolveJsonModule": true,
-        "noImplicitAny": false,
-        "allowImportingTsExtensions": true,
+        "moduleDetection": "force",
         "isolatedModules": true,
+
+        /* Strictness */
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        "checkJs": true,
+
+        /* Bundled projects */
+        "lib": ["dom", "dom.iterable", "ES2022"],
+        "noEmit": true,
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
         "jsx": "preserve",
+        "plugins": [{ "name": "next" }],
         "incremental": true,
-        "forceConsistentCasingInFileNames": true,
-        "types": ["node"],
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ],
+
+        /* Path Aliases */
+        "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"]
         }
     },
     "include": [
+        ".next/types/**/*.ts",
         "next-env.d.ts",
+        "next.config.mjs",
+
         "**/*.ts",
         "**/*.tsx",
-        ".next/types/**/*.ts",
-        "src/app/**/*.tsx",
-        "typings.d.ts"
+
+        ".eslintrc.cjs",
+        ".prettierrc.cjs",
+        ".commitlintrc.cjs",
+        "postcss.config.cjs",
+        "next-sitemap.config.cjs"
     ],
     "exclude": ["node_modules"]
 }

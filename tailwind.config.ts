@@ -3,13 +3,16 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 
 import type { Config } from 'tailwindcss';
 
-const config: Config = {
+export default {
     darkMode: 'class',
     content: [
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/app/**/**/*.{js,ts,jsx,tsx,mdx}',
         './src/**/*.{js,ts,jsx,tsx}',
-        './src/lib/**/*.{ts,tsx}'
+        './src/lib/**/*.{ts,tsx}',
+        './src/**/*.{ts,tsx}',
+        './src/styles/*.css'
     ],
     theme: {
         theme: {
@@ -114,7 +117,7 @@ const config: Config = {
                     // 光标闪烁动画
                     'cursor-blink': 'cursor-blink 0.6s step-end infinite alternate',
                     'intro-scroll': 'intro-scroll 3s ease infinite'
-                }
+                },
             }
         }
     },
@@ -122,11 +125,10 @@ const config: Config = {
         require('tailwindcss-animate'),
         require('@tailwindcss/typography'),
         // 开发模式下加载显示屏幕大小的插件
-        // process.env.NODE_ENV === 'development' && require('tailwindcss-debug-screens'),
+        process.env.NODE_ENV === 'development' && require('tailwindcss-debug-screens'),
         // Iconify plugin
         addDynamicIconSelectors(),
         // 动画插件
         require('tailwindcss-animated')
     ]
-};
-export default config;
+} satisfies Config;
