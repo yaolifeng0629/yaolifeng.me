@@ -6,11 +6,7 @@ import Particles from '@/components/particles';
 import StyledComponentsRegistry from '@/lib/registry';
 
 import type { Metadata } from 'next';
-
-import 'bytemd/dist/index.css';
-import '@/styles/bytemd.css';
-import '@/styles/github.css';
-import '@/styles/github-dark.css';
+import "@/styles/global.css";
 
 export const metadata: Metadata = {
     title: '姚利锋',

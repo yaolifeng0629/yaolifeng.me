@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "bytemd/dist/index.css";
+/* @import "./bytemd.css"; */
+/* @import "./github.css"; */
+/* @import "./github-dark.css"; */
+
 @layer components {
     .border-border {
         border-color: var(--border);
