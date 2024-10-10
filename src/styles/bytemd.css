@@ -36,11 +36,15 @@
 }
 
 .medium-zoom-overlay {
-    @apply z-20 !bg-background;
+    /* @apply z-20 !bg-background; */
+    @apply z-20;
+    background-color: var(--background) !important;
 }
 
 .markdown-body pre {
-    @apply relative !my-0 whitespace-break-spaces !rounded-xl border !bg-background/50 text-primary;
+    /* @apply relative !my-0 whitespace-break-spaces !rounded-xl border !bg-background/50 text-primary; */
+    @apply relative !my-0 whitespace-break-spaces !rounded-xl border text-primary;
+    background-color: var(--background) !important;
 }
 
 .markdown-body code::-webkit-scrollbar {
@@ -121,26 +125,36 @@
 
 /* 编辑器内显示行数 */
 .CodeMirror-linenumber {
-    @apply !text-foreground;
+    /* @apply !text-foreground; */
+    color: var(--foreground) !important;
 }
 
 /* 编辑器内显示行数背景 */
 .CodeMirror-gutters {
-    @apply !border-r-muted !bg-background;
+    /* @apply !border-r-muted !bg-background; */
+    @apply !border-r-muted;
+    background-color: var(--background) !important;
 }
 
 /* 下面代码的灵感来自这个Issue: https://github.com/pd4d10/hashmd/issues/40 */
 /* ByteMD editor overrides	*/
 .bytemd {
-    @apply !rounded-xl !border-border !bg-background !text-foreground;
+    /* @apply !rounded-xl !border-border !bg-background !text-foreground; */
+    @apply !rounded-xl !border-border ;
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
 }
 
 .bytemd-toolbar {
-    @apply !rounded-none !border-border !bg-background;
+    /* @apply !rounded-none !border-border !bg-background; */
+    @apply !rounded-none !border-border ;
+    background-color: var(--background) !important;
 }
 
 .CodeMirror {
-    @apply !bg-background !text-foreground;
+    /* @apply !bg-background !text-foreground; */
+    color: var(--foreground) !important;
+    background-color: var(--background) !important;
 }
 
 .bytemd-split .bytemd-preview {

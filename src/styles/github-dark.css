@@ -20,7 +20,8 @@
 */
 .dark .hljs {
     color: #c9d1d9;
-    @apply !bg-background;
+    /* @apply !bg-background; */
+    background-color: var(--background) !important;
 }
 
 .dark .hljs-doctag,

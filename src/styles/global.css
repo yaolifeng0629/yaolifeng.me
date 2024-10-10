@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @import "bytemd/dist/index.css";
-/* @import "./bytemd.css"; */
-/* @import "./github.css"; */
-/* @import "./github-dark.css"; */
+@import "./bytemd.css";
+@import "./github.css";
+@import "./github-dark.css";
 
 @layer components {
     .border-border {
@@ -36,6 +36,7 @@
         --ring: #d1d1ff;
         --selection-color: rgb(0, 0, 0);
         --selection-background: rgb(255, 239, 92);
+        --radius: 1rem;
     }
 
     *,
@@ -46,11 +47,19 @@
 
     html,
     body {
-        @apply w-full h-full antialiased;
-        background-color: var(--background);
-        color: var(--foreground);
+        @apply w-full h-full bg-background text-foreground antialiased;
     }
 }
+/* 适配 shiki 深色模式 */
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
 /* 选中文本样式 */
 ::selection,
 strong::selection,
