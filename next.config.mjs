@@ -12,9 +12,6 @@ const nextConfig = {
     typescript: {
         ignoreBuildErrors: true
     },
-    // sassOptions: {
-    //     additionalData: '@import "@/styles/index.scss";'
-    // },
     compiler: {
         styledComponents: true
     },
