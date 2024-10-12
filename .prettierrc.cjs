@@ -1,7 +1,9 @@
 /** @type {import('prettier').Config & import('@trivago/prettier-plugin-sort-imports').PluginConfig} */
 const config = {
   plugins: ["prettier-plugin-tailwindcss", "@trivago/prettier-plugin-sort-imports"],
+  printWidth: 120,
   tabWidth: 4,
+  useTabs: false,
   trailingComma: "all",
   singleQuote: true,
   vueIndentScriptAndStyle: true,
