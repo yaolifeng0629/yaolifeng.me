@@ -48,7 +48,7 @@ export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
                     <MarkdownTOC />
                 </DetailSidebar>
             </div>
-            <div className="flex h-5 items-center space-x-1">
+            <div className="flex h-5 items-center space-x-1 pb-24">
                 <ul className="mb-1 flex space-x-4 text-xs font-medium text-muted-foreground">
                     {blog.tags.map((tag: string, index: React.Key | null | undefined) => (
                         <li key={index} className="flex items-center">

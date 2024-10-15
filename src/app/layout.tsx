@@ -20,7 +20,7 @@ export default function RootLayout({
         <html>
             <body className="flex flex-col items-center dark scroll-smooth" >
                 <Navbar />
-                <main className="min-h-[calc(100vh-190px)] w-screen max-w-screen-md 2xl:max-w-7xl md:px-10">
+                <main className="min-h-[calc(100vh-190px)] w-screen max-w-screen-md 2xl:max-w-7xl md:px-10 z-[2]">
                     {children}
                 </main>
                 <Favicon />

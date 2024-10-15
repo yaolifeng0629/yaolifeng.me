@@ -95,15 +95,7 @@ export default function ParticleEffect({
     return (
         <canvas
             ref={canvasRef}
-            style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                background: 'black',
-                zIndex: -1,
-            }}
+            className='fixed inset-0 z-[0]'
         />
     );
 }
