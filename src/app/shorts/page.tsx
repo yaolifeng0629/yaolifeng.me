@@ -27,7 +27,7 @@ function ShortItem({ short }: { short: Short }) {
     if (!photo) return null;
 
     return (
-        <Card size="2" className="border border-[#2f2f2f] rounded-lg p-0 overflow-hidden">
+        <Card size="2" className="border border-[#2f2f2f] rounded-[8px] p-0 overflow-hidden">
             <Link href={`/shorts/${short.slug}`} className="flex flex-col">
                 <Inset clip="padding-box" side="top" pb="current">
                     <Image

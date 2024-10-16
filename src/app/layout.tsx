@@ -1,7 +1,7 @@
 import { Console } from '@/components/console';
 import { Favicon } from '@/components/favicon';
 import { Navbar } from '@/components/navbar';
-import ParticlesBg from "@/components/particles-v2/index";
+import ParticlesBg from "@/components/particles/index";
 
 import type { Metadata } from 'next';
 import "@/styles/global.css";

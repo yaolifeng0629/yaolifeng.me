@@ -14,7 +14,7 @@ import nginx from 'highlight.js/lib/languages/nginx';
 import { merge } from 'lodash-es';
 import { common } from 'lowlight';
 
-import { headingPlugin, prettyLinkPlugin } from './plugins';
+import { codeBlockPlugin, headingPlugin, prettyLinkPlugin } from './plugins';
 
 export const plugins = [
     breaks(),
@@ -35,6 +35,7 @@ export const plugins = [
             asciidoc: asciidoc // asciidoc高亮, 控制台输出信息高亮
         }
     }),
+    codeBlockPlugin(),
     prettyLinkPlugin(),
     headingPlugin()
 ];

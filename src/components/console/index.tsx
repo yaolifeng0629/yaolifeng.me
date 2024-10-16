@@ -2,7 +2,7 @@
 
 /* eslint-disable no-console */
 import { ASCII_ART_FONT, NICKNAME, SOURCE_CODE_GITHUB_PAGE } from '@/constants';
-import { isBrowser } from '@/lib/utils';
+import { isBrowser } from '@/utils/utils';
 
 const fontFamily =
     'font-family: Poppins, PingFang SC, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";';
@@ -12,10 +12,10 @@ const fontFamily =
         // 放到这里执行，保证只输出一次
         console.log(ASCII_ART_FONT);
         console.log(`%c作者：${NICKNAME}`, `color: #999; font-size: 2rem;${fontFamily}`);
-        console.log(
-            `%c哎哟，觉得小老弟代码写的不错？点个 ⭐，借鉴借鉴 👇`,
-            `color: #f43f5e; font-size: 1rem;${fontFamily}`
-        );
+        // console.log(
+        //     `%c哎哟，觉得小老弟代码写的不错？点个 ⭐，借鉴借鉴 👇`,
+        //     `color: #f43f5e; font-size: 1rem;${fontFamily}`
+        // );
         console.log(
             `%c网站源码 Github：${SOURCE_CODE_GITHUB_PAGE}`,
             `color: #999; font-size: 1rem;${fontFamily}`

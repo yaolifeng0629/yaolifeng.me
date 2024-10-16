@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 
 interface WrapperProps extends React.HTMLAttributes<HTMLDivElement>, React.PropsWithChildren {}
 

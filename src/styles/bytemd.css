@@ -93,7 +93,7 @@
 }
 
 .markdown-body img {
-  @apply mx-auto max-h-[40vh] rounded-lg border p-4;
+  @apply mx-auto max-h-[40vh] rounded-lg border p-2;
 }
 
 /* 修复存在表格时，表格宽度溢出的问题 */

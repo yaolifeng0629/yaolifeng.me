@@ -53,7 +53,7 @@ export default function Page() {
                 <h2>我是谁</h2>
                 <p>
                     Hi~ 我是{NICKNAME}
-                    ，一名前端开发工程师，喜欢 Coding 和 Immersion
+                    ，一名前端开发工程师，喜欢 Writing Instrument 和 Immersion
                 </p>
             </div>
 
@@ -147,7 +147,7 @@ export default function Page() {
             >
                 <h3>其它</h3>
                 <ul>
-                    <li>wezTerm + Fira Code，舒服的很</li>
+                    <li>wezTerm（xTerminal） + Fira Code，舒服的很</li>
                     {/* <li>
                         用过 <IconLogoCentOS className="mx-1 translate-y-0.5" />
                         CentOS、
@@ -178,21 +178,21 @@ export default function Page() {
                             <IconSkillFigmaDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillFigmaLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
                         </>
-                        Figma，会一点，用来画画图标，制作博客封面非常方便
+                        Figma，会一点点
                     </li>
                     <li>
                         熟练使用 <IconLogoGoogle className="mx-1 translate-y-0.5" />
                         Google/
                         <IconLogoBing className="mx-1 translate-y-0.5" />
                         Bing 搜索
-                        <span className="ml-1 line-through">百度（浪费生命）</span> +
+                        <span className="ml-1 line-through">百度（广告太多）</span> +
                         <IconBrandGithub className="mx-1 translate-y-0.5" />
                         GitHub +
                         <>
                             <IconSkillStackoverflowDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillStackoverflowLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
                         </>
-                        Stack Overflow + Chat GPT 解决遇到的各种问题，复制粘贴我最行 🙋
+                        + Stack Overflow + Chat GPT 解决遇到的各种问题，复制粘贴我最行 🙋
                     </li>
                 </ul>
             </div>
@@ -210,8 +210,8 @@ export default function Page() {
                         <span className="line-through">从最开始到现在的第二台笔记本</span>
                         🙃
                     </li>
-                    <li>七彩虹将星 x15：16G + 1TB + i7-13700HX/4060</li>
-                    <li>165HZ / 2K</li>
+                    <li>七彩虹将星 x15：16G + 1TB + i7-13700HX/4060 165HZ / 2K</li>
+                    <li>屏幕：KTC 23.8英寸 / HDR400</li>
                     <li>键盘：（ikbc）K108 红轴</li>
                     <li>鼠标：罗技（G102紫色） 2代</li>
                 </ul>

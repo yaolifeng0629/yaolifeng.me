@@ -8,7 +8,7 @@ import Tag from '@/components/tag';
 import { type Blog } from '../types';
 
 import { PATHS } from '@/constants';
-import { cn, prettyDate } from '@/lib/utils';
+import { cn, prettyDate } from '@/utils/utils';
 
 type BlogListItemProps = {
     blog: Blog;
