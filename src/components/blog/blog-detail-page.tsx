@@ -1,3 +1,4 @@
+'use client';
 import { MoveLeft } from 'lucide-react';
 import Link from 'next/link';
 
@@ -40,13 +41,14 @@ export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
 
             <div className="flex">
                 <div className={cn('flex-1', 'border-r border-r-[#2f2f2f] wrapper:pr-14')}>
-                    <BytemdViewer body={blog.content || ''} />
+                    {blog.content ? <BytemdViewer body={blog.content} /> : <p>加载中...</p>}
+                    {/* 内容 */}
                 </div>
                 <DetailSidebar>
                     <MarkdownTOC />
                 </DetailSidebar>
             </div>
-            <div className="flex h-5 items-center space-x-1">
+            <div className="flex h-5 items-center space-x-1 pb-24">
                 <ul className="mb-1 flex space-x-4 text-xs font-medium text-muted-foreground">
                     {blog.tags.map((tag: string, index: React.Key | null | undefined) => (
                         <li key={index} className="flex items-center">

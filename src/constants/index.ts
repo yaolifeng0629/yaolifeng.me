@@ -13,3 +13,5 @@ export * from './error';
 export * from './assets';
 
 export * from './meilisearch';
+
+export * from './tag';
