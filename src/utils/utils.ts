@@ -5,7 +5,8 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import slugify from 'slugify';
 import { twMerge } from 'tailwind-merge';
 
-// import { showErrorToast, showSuccessToast } from "@/components/ui/toast";
+import { showErrorToast, showSuccessToast } from '@/components/ui/toast';
+
 export const cn = (...inputs: ClassValue[]) => {
     return twMerge(clsx(inputs));
 };
@@ -25,13 +26,12 @@ export const copyToClipboard = (text: string) => {
         navigator.clipboard
             .writeText(text?.trim())
             .then(() => {
-                // showSuccessToast("已复制到粘贴板");
+                showSuccessToast('已复制到粘贴板');
             })
             .catch((error) => {
-                // showErrorToast(error as string);
+                showErrorToast(error as string);
             });
     } else {
-        // 以下代码来自：https://www.zhangxinxu.com/wordpress/2021/10/js-copy-paste-clipboard/
         const textarea = document.createElement('textarea');
         document.body.appendChild(textarea);
         // 隐藏此输入框
@@ -44,7 +44,7 @@ export const copyToClipboard = (text: string) => {
         textarea.select();
         // 复制
         document.execCommand('copy', true);
-        // showSuccessToast('已复制到粘贴板');
+        showSuccessToast('已复制到粘贴板');
         // 移除输入框
         document.body.removeChild(textarea);
     }
