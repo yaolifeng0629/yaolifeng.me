@@ -12,7 +12,7 @@ import { NextLink } from '../next-link';
 import { navItems } from './config';
 
 import { NICKNAME, PATHS, WEBSITE } from '@/constants';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 
 export const Navbar = () => {
     const scroll = useScroll(() => document);

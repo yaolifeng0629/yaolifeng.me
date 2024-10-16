@@ -3,7 +3,7 @@ import React from 'react';
 import { IllustrationFailureDark } from './illustration-failure-dark';
 import { IllustrationFailureLight } from './illustration-failure-light';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 export function IllustrationFailure(props: React.SVGProps<SVGSVGElement>) {
     return (
         <>

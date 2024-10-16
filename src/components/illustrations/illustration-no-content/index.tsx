@@ -3,7 +3,7 @@ import React from 'react';
 import { IllustrationNoContentDark } from './illustration-no-content-dark';
 import { IllustrationNoContentLight } from './illustration-no-content-light';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 export function IllustrationNoContent(props: React.SVGProps<SVGSVGElement>) {
     return (
         <>

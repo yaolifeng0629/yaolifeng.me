@@ -3,7 +3,7 @@ import React from 'react';
 import { IllustrationNotFoundDark } from './illustration-not-found-dark';
 import { IllustrationNotFoundLight } from './illustration-not-found-light';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 export function IllustrationNotFound(props: React.SVGProps<SVGSVGElement>) {
     return (
         <>

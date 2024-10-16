@@ -1,28 +1,75 @@
-import sizeOf from "image-size";
+import { type ClassValue, clsx } from 'clsx';
+import dayjs from 'dayjs';
+import 'dayjs/locale/zh-cn';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import slugify from 'slugify';
+import { twMerge } from 'tailwind-merge';
 
-export async function getImageDimensionByUri(
-  uri: string,
-  useFullSize = false,
-): Promise<{ width: number; height: number; uri: string } | null> {
-  const headers: Record<string, string> = {};
+// import { showErrorToast, showSuccessToast } from "@/components/ui/toast";
+export const cn = (...inputs: ClassValue[]) => {
+    return twMerge(clsx(inputs));
+};
 
-  if (!useFullSize) headers.Range = "bytes=0-10240";
+export const toSlug = (s: string) => {
+    if (!s) {
+        return '';
+    }
 
-  try {
-    const response = await fetch(uri, { headers });
-    const arrayBuffer = await response.arrayBuffer();
-    const buffer = Buffer.from(arrayBuffer);
-    const dimensions = sizeOf(buffer);
-    if (!(dimensions.width && dimensions.height)) throw new Error("Could not determine image dimensions.");
+    return slugify(s, {
+        lower: true,
+    });
+};
 
-    return {
-      width: dimensions.width,
-      height: dimensions.height,
-      uri,
-    };
-  } catch {
-    if (!useFullSize) return getImageDimensionByUri(uri, true);
+export const copyToClipboard = (text: string) => {
+    if (navigator.clipboard) {
+        navigator.clipboard
+            .writeText(text?.trim())
+            .then(() => {
+                // showSuccessToast("已复制到粘贴板");
+            })
+            .catch((error) => {
+                // showErrorToast(error as string);
+            });
+    } else {
+        // 以下代码来自：https://www.zhangxinxu.com/wordpress/2021/10/js-copy-paste-clipboard/
+        const textarea = document.createElement('textarea');
+        document.body.appendChild(textarea);
+        // 隐藏此输入框
+        textarea.style.position = 'fixed';
+        textarea.style.clip = 'rect(0 0 0 0)';
+        textarea.style.top = '10px';
+        // 赋值，手动去除首尾空白字符
+        textarea.value = text?.trim();
+        // 选中
+        textarea.select();
+        // 复制
+        document.execCommand('copy', true);
+        // showSuccessToast('已复制到粘贴板');
+        // 移除输入框
+        document.body.removeChild(textarea);
+    }
+};
 
-    return null;
-  }
-}
+export const isBrowser = () => {
+    // 代码来自：https://ahooks.js.org/zh-CN/guide/blog/ssr
+    /* eslint-disable @typescript-eslint/prefer-optional-chain */
+    return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+};
+
+dayjs.extend(relativeTime);
+
+export const toFromNow = (date: number | Date) => {
+    return dayjs(date).locale('zh-cn').fromNow();
+};
+
+export const toSlashDateString = (date: number | Date) => {
+    return dayjs(date).locale('zh-cn').format('YYYY年M月D日 dddd HH:mm:ss');
+};
+
+export const prettyDate = (date: number | Date) => {
+    return dayjs(date).locale('zh-cn').format('YYYY年 M月 D日');
+};
+
+export const prettyDateWithWeekday = (date: number | Date) => {
+    return dayjs(date).locale('zh-cn').format('YYYY 年 M 月 D 日，dddd');
+};

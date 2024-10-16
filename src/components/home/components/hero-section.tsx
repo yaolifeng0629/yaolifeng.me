@@ -7,7 +7,7 @@ import socialMediaList from './social-media';
 import TypeIntro from './type-intro';
 
 import { NICKNAME, PATHS } from '@/constants';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 
 const HeroSection = () => {
     let delay = 0;
@@ -82,7 +82,7 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                在这里记录你的日常，努力成为一个简单、更好的自己💪
+                在这里记录我的日常，努力成为一个简单、更好的自己💪
             </p>
             <div
                 className={cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')}

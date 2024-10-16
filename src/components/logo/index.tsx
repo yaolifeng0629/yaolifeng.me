@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import { ImageAssets, WEBSITE } from '@/constants';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 
 type Props = {
     className?: string;

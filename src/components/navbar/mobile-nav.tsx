@@ -20,7 +20,7 @@
 // import { navItems } from './config';
 
 // import { SLOGAN, WEBSITE } from '@/constants';
-// import { cn } from '@/lib/utils';
+// import { cn } from '@/utils/utils';
 
 // export const MobileNav = () => {
 //     const pathname = usePathname();

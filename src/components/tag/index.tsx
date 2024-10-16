@@ -6,7 +6,7 @@ interface TagProps {
 
 const Tag: React.FC<TagProps> = ({ text }) => {
     return (
-        <span className="inline-block bg-[#21212180] text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded border border-[#4F555C]-700 overflow ">
+        <span className="inline-block bg-[#18181880] text-gray-500 text-xs font-medium px-2.5 py-0.5 rounded border border-[#1f1f1f] overflow ">
             #&nbsp;{text}
         </span>
     );

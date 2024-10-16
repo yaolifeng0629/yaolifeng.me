@@ -3,7 +3,7 @@ import React from 'react';
 import { IllustrationNoResultDark } from './illustration-no-result-dark';
 import { IllustrationNoResultLight } from './illustration-no-result-light';
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 export function IllustrationNoResult(props: React.SVGProps<SVGSVGElement>) {
     return (
         <>

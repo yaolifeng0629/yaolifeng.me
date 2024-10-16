@@ -32,7 +32,6 @@ const config = {
     "@/providers",
     "@/components/ui/(.*)",
     "@/components/(.*)",
-    "@/libs/(.*)",
     "@/utils/(.*)",
     "@/.*",
     "^./(.*)",
