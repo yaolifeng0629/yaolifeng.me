@@ -185,14 +185,14 @@ export default function Page() {
                         Google/
                         <IconLogoBing className="mx-1 translate-y-0.5" />
                         Bing 搜索
-                        <span className="ml-1 line-through">百度（广告太多，但个人觉得在找无从下手的 bug 时好用）</span> +
+                        <span className="ml-1 line-through">百度（广告太多）</span> +
                         <IconBrandGithub className="mx-1 translate-y-0.5" />
                         GitHub +
                         <>
                             <IconSkillStackoverflowDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillStackoverflowLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
                         </>
-                        + Issues + Stack Overflow + Chat GPT 解决遇到的各种问题，复制粘贴我最行 🙋
+                        + Stack Overflow + Chat GPT 解决遇到的各种问题，复制粘贴我最行 🙋
                     </li>
                 </ul>
             </div>
@@ -210,8 +210,7 @@ export default function Page() {
                         <span className="line-through">从最开始到现在的第二台笔记本</span>
                         🙃
                     </li>
-                    <li>七彩虹将星 x15：16G + 1TB + i7-13700HX/4060</li>
-                    <li>165HZ / 2K</li>
+                    <li>七彩虹将星 x15：16G + 1TB + i7-13700HX/4060 165HZ / 2K</li>
                     <li>屏幕：KTC 23.8英寸 / HDR400</li>
                     <li>键盘：（ikbc）K108 红轴</li>
                     <li>鼠标：罗技（G102紫色） 2代</li>
