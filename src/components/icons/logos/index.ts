@@ -5,6 +5,7 @@ export * from './icon-logo-rocky-linux';
 export * from './icon-logo-bing';
 export * from './icon-logo-google';
 export * from './icon-logo-gitee';
-export * from './icon-logo-weixin';
+export * from './icon-logo-wechat';
+export * from './icon-logo-official-accounts';
 export * from './icon-logo-youtube';
 export * from './icon-logo-twitter';
