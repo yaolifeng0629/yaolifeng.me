@@ -32,6 +32,7 @@ export default function RootLayout({
                     maxParticleSize={3}
                     minSpeed={0.1}
                     maxSpeed={1}
+                    fadeInDuration={2000}
                 />
             </body>
         </html>
