@@ -5,6 +5,12 @@ import Link from 'next/link';
 
 import { getShorts, Short } from '@/api/shorts';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: '姚利锋 | 片段',
+    description: '姚利锋 | 片段'
+};
 export const revalidate = 60;
 
 const Page: NextPage = async () => {

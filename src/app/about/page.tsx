@@ -32,6 +32,12 @@ import {
 import { Button } from '@/components/ui/button';
 
 import { NICKNAME } from '@/constants';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: '姚利锋 | 关于',
+    description: '姚利锋 | 关于'
+};
 
 export const revalidate = 60;
 

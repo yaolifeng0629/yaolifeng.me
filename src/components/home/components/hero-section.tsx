@@ -82,7 +82,7 @@ const HeroSection = () => {
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                在这里记录我的日常，努力成为一个简单、更好的自己💪
+                在这里记录我的日常，做一个成为一个简单、更好的自己💪
             </p>
             <div
                 className={cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')}
