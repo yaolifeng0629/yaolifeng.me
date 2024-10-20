@@ -10,10 +10,12 @@ import { getBlogBySlug } from '@/api/blogs';
 export const revalidate = 60;
 
 async function getBlogContent(contentPath: string) {
-    const fullPath = path.join(
-        process.cwd(),
-        contentPath.replace(/^import\('/, '').replace(/'\)$/, '')
-    );
+    const cleanPath = contentPath.replace(/^import\('/, '').replace(/'\)$/, '');
+
+    const trimmedPath = cleanPath.startsWith('@/') ? cleanPath.slice(2) : cleanPath;
+
+    const fullPath = path.join(process.cwd(), trimmedPath);
+
     try {
         const content = await fs.readFile(fullPath, 'utf-8');
         return content;

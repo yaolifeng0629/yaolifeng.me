@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function IconLogoWeChat({ className, ...props }: React.HTMLAttributes<SVGElement>) {
+export function IconLogoOfficialAccount({ className, ...props }: React.HTMLAttributes<SVGElement>) {
     return (
         <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="2em">
             <path

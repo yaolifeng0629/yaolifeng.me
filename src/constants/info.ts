@@ -7,6 +7,9 @@ export const NICKNAME = '姚利锋';
 /** Github 个人页 */
 export const GITHUB_PAGE = 'https://github.com/yaolifeng0629';
 
+/** 微信号图片 */
+export const WECHAT = 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/wechat_1729349882.jpg';
+
 // YouTube 个人页
 export const YOUTUBE = 'https://www.youtube.com/channel/UCTcYdMnMZtdyuOyxMj6OJnA';
 
