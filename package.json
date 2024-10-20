@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "dev": "next dev -p 9528",
-        "build": "next build && cp -r src/data/posts/blogs .next/server/chunks/",
+        "build": "next build",
         "start": "next start -p 3001",
         "test": "vitest run",
         "format": "prettier --write --cache .",
