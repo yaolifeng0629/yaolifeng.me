@@ -4,7 +4,12 @@ import { notFound } from 'next/navigation';
 import { ShortsDetailPage } from '@/components/shorts';
 
 import { getShortBySlug } from '@/api/shorts';
+import type { Metadata } from 'next';
 
+export const metadata: Metadata = {
+    title: '姚利锋 | 片段',
+    description: '姚利锋 | 片段'
+};
 export const revalidate = 60;
 
 export default async function Page({ params }: { params: { slug: string } }) {

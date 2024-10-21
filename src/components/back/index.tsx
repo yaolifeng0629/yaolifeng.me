@@ -1,17 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 import { MoveLeft } from 'lucide-react';
-import { PATHS } from '@/constants';
 import { cn } from '@/utils/utils';
 
 interface BackProps {
     text: string;
+    href: string
 }
 
-const Back: React.FC<BackProps> = ({ text }) => {
+const Back: React.FC<BackProps> = ({ text, href }) => {
     return (
         <Link
-            href={PATHS.SITE_BLOG}
+            href={href}
             className={cn(
                 'text-sm flex items-center space-x-1 transition-colors py-2',
                 'text-muted-foreground hover:text-primary'
