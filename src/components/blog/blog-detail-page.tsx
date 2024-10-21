@@ -29,7 +29,19 @@ export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
             <div className="flex">
                 <div className={cn('flex-1', 'border-r border-r-[#2f2f2f] wrapper:pr-14')}>
                     {/* 内容 */}
-                    {blog.content ? <BytemdViewer body={blog.content} /> : <p>加载中...</p>}
+                    {blog.content ? <BytemdViewer body={blog.content} /> : <div className="flex items-center justify-center w-full h-full">
+                        <div className="flex justify-center items-center space-x-1 text-base text-[#737373]">
+
+                            <svg fill='none' className="w-6 h-6 animate-spin" viewBox="0 0 32 32" xmlns='http://www.w3.org/2000/svg'>
+                                <path clip-rule='evenodd'
+                                    d='M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z'
+                                    fill='currentColor' fill-rule='evenodd' />
+                            </svg>
+
+
+                            <div>加载中 ...</div>
+                        </div>
+                    </div>}
                     <div className="flex h-5 items-center space-x-1 pb-10 mt-16">
                         <ul className="mb-1 flex space-x-4 text-xs font-medium text-muted-foreground">
                             {blog.tags.map((tag: string, index: React.Key | null | undefined) => (
