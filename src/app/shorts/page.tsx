@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { getShorts, Short } from '@/api/shorts';
+import { getShort, Short } from '@/api/shorts';
 
 import type { Metadata } from 'next';
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 const Page: NextPage = async () => {
-    const shorts = await getShorts();
+    const shorts = await getShort();
 
     return (
         <>
