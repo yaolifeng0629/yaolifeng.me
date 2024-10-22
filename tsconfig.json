@@ -42,6 +42,6 @@
         ".commitlintrc.cjs",
         "postcss.config.cjs",
         "next-sitemap.config.cjs"
-    ],
+, "src/data/posts/parsed/blogs.js"    ],
     "exclude": ["node_modules"]
 }
