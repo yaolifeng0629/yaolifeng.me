@@ -4,6 +4,7 @@ import path from 'path';
 import shortsData from '@/data/shorts/parsed/shorts';
 
 export interface Short {
+    id: string;
     slug: string;
     content: string;
     url: string;
@@ -19,7 +20,7 @@ export async function getShort() {
 
 export async function getShortBySlug(slug: string) {
     const shorts = await getShort();
-    const short = shorts.find((short: { slug: string }) => short.slug === slug);
+    const short = shorts.find((short: any) => short.slug === slug);
     if (!short) return null;
 
     try {
