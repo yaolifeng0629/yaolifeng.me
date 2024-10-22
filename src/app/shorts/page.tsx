@@ -1,6 +1,5 @@
 import { Box, Card, Inset, Text } from '@radix-ui/themes';
 import { NextPage } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import ShortImg from '@/components/short-img'
 
@@ -20,7 +19,7 @@ const Page: NextPage = async () => {
     return (
         <>
             <h2 className="pb-8 text-3xl font-bold md:text-4xl px-6 pt-8">最新片段</h2>
-            <Box my="4" className="columns-3xs space-y-4 px-6">
+            <Box my="4" className="columns-3xs space-y-4 px-6 mb-24">
                 {shorts.map((short: any) => (
                     <ShortItem key={short.id} short={short} />
                 ))}
@@ -31,23 +30,18 @@ const Page: NextPage = async () => {
 
 function ShortItem({ short }: { short: Short }) {
     const photo = short.url;
-    // if (!photo) return null;
 
     return (
         <Card size="2" className="border border-[#2f2f2f] rounded-[8px] p-0 overflow-hidden">
             <Link href={`/shorts/${short.slug}`} className="flex flex-col">
                 {
                     photo ?
-
-                        <Inset clip="padding-box" side="top" pb="current">
-                            <Image
+                        <Inset clip="padding-box" side="top" pb="current" className='flex justify-center'>
+                            <img
                                 src={photo}
                                 alt={short.title}
-                                width={300}
-                                height={200}
-                                layout="responsive"
                             />
-                        </Inset> : <ShortImg text={short.title} />
+                        </Inset> : <ShortImg text={short.description} />
                 }
                 <Text as="p" size="3" className="px-3 py-3 text-gray-50">
                     {short.title || short.description}
