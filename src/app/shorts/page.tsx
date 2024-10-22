@@ -38,6 +38,7 @@ function ShortItem({ short }: { short: Short }) {
                     photo ?
                         <Inset clip="padding-box" side="top" pb="current" className='flex justify-center'>
                             <img
+                                className='h-full min-h-[150px]'
                                 src={photo}
                                 alt={short.title}
                             />
