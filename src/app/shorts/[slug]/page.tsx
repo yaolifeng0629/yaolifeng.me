@@ -6,9 +6,6 @@ import { ShortsDetailPage } from '@/components/shorts';
 import { getShortBySlug } from '@/api/shorts';
 import type { Metadata } from 'next';
 
-// 兼容 cloudflare pages
-export const runtime = 'edge';
-
 export const metadata: Metadata = {
     title: '姚利锋 | 片段',
     description: '姚利锋 | 片段'

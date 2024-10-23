@@ -5,9 +5,6 @@ import { BlogDetailPage } from '@/components/blog';
 import type { Metadata } from 'next';
 import { getBlogBySlug } from '@/api/blogs';
 
-// 兼容 cloudflare pages
-export const runtime = 'edge';
-
 export const metadata: Metadata = {
     title: '姚利锋 | 博客',
     description: '姚利锋 | 博客'
