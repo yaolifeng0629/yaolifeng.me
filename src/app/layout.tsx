@@ -4,6 +4,7 @@ import { Console } from '@/components/console';
 import { Favicon } from '@/components/favicon';
 import { Navbar } from '@/components/navbar';
 import ParticlesBg from '@/components/particles/index';
+import { Analytics } from '@vercel/analytics/react';
 
 import '@/styles/global.css';
 
@@ -24,6 +25,7 @@ export default function RootLayout({
                 <main className="min-h-[calc(100vh-190px)] w-screen max-w-screen-md 2xl:max-w-7xl md:px-10 z-[2] scrollbar-hide overflow-y-auto">
                     {children}
                 </main>
+                <Analytics />
                 <Favicon />
                 <Console />
                 <ParticlesBg
