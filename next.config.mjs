@@ -41,6 +41,7 @@ const nextConfig = {
         optimizePackageImports: ["shiki"],
         serverComponentsExternalPackages: ['fs', 'path'],
     },
+    runtime: process.env.DEPLOYMENT_PLATFORM === 'cloudflare' ? 'edge' : undefined,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     reactStrictMode: false, // Strict patterns are primarily used to identify unsafe lifecycles, outdated APIs, etc. However, in development mode, the component is executed twice, which means that the interface is called multiple times, so turn off the mode.
 };
