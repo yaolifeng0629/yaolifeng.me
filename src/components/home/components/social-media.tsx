@@ -23,27 +23,26 @@ const socialMediaList: Array<{
         label: 'Github(yaolifeng0629)',
         link: GITHUB_PAGE,
     },
-    {
-        icon: <IconLogoWeChat className="text-2xl" />,
-        label: '微信号(15829485647)',
-        link: WECHAT,
-    },
-    {
-        icon: <IconLogoYoutube className="text-2xl" />,
-        label: 'Youtube(Immerse)',
-        link: YOUTUBE,
-    },
+    // {
+    //     icon: <IconLogoWeChat className="text-2xl" />,
+    //     label: '微信号(15829485647)',
+    //     link: WECHAT,
+    // },
+    // {
+    //     icon: <IconLogoYoutube className="text-2xl" />,
+    //     label: 'Youtube(Immerse)',
+    //     link: YOUTUBE,
+    // },
     {
         icon: <IconLogoOfficialAccount className="text-2xl" />,
         label: '微信公众号(非同质前端札记)',
         link: WEIXIN_OFFICIAL,
     },
-
-    {
-        icon: <IconsLogoGitee className="text-2xl" />,
-        label: 'Gitee(yaolifeng0529)',
-        link: GITEE,
-    },
+    // {
+    //     icon: <IconsLogoGitee className="text-2xl" />,
+    //     label: 'Gitee(yaolifeng0529)',
+    //     link: GITEE,
+    // },
     {
         icon: <IconLogoTwitter className="text-2xl" />,
         label: 'Twitter(Immerse_code)',
