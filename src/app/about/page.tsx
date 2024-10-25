@@ -137,11 +137,11 @@ export default function Page() {
                             <IconSkillNextjsLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
                         </>
                         Next.js +
-                        <>
+                        {/* <>
                             <IconSkillMysqlDark className="mx-1 translate-y-0.5 dark:hidden" />
                             <IconSkillMysqlLight className="mx-1 hidden translate-y-0.5 dark:inline-block" />
-                        </>
-                        MySQL 搞全栈开发
+                        </> */}
+                         Prisma 搞全栈开发
                     </li>
                 </ul>
             </div>
