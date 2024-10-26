@@ -51,7 +51,7 @@
 
 以下是一个包结构的示例：
 
-```
+```tree
 my-awesome-package/
 ├── src/
 │   ├── index.ts
