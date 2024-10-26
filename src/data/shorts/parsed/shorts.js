@@ -51,6 +51,17 @@ import {
 
 export default [
     {
+        id: 'b795d11d-f019-4daf-9a9f-03766ee61acb',
+        url: 'https://qncdn.mopic.mozigu.net/work/143/24/b8e6969783864817/cursor.jpg',
+        slug: 'cursor_free_guide',
+        createdAt: 1729757310050,
+        title: '反复白嫖 Cursor 详细指南',
+        description:
+            '该博客详细介绍了如何有效地使用Cursor工具进行前端开发，包括如何利用Cursor的各种功能来提高开发效率，避免重复劳动。内容涵盖了Cursor的基本操作、高级技巧、常见问题及解决方案，以及如何通过Cursor实现代码的快速生成和优化。博客还探讨了如何在团队协作中最大化利用Cursor，以及如何通过Cursor的插件和扩展功能进一步提升开发体验。此外，博客还提供了一些实用的案例和示例，帮助读者更好地理解和应用Cursor。',
+        tags: [DEVOPS],
+        content: '/shorts/反复白嫖 Cursor 详细指南.md',
+    },
+    {
         id: 'c9febbd3-2529-4723-b121-5554748749c5',
         url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/chrome_usage_tips_summary.png',
         slug: 'chrome_usage_tips_summary',
@@ -303,5 +314,4 @@ export default [
         tags: [JAVASCRIPT, HTML, CSS, REST_API, BROWSER_APIS],
         content: '/shorts/随机头像API.md',
     },
-]
-
+];
