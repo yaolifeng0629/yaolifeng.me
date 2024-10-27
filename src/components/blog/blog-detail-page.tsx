@@ -17,7 +17,7 @@ type BlogDetailProps = {
 
 export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
     return (
-        <Wrapper className="flex flex-col pt-8">
+        <Wrapper className="flex flex-col pt-8 overflow-x-hidden">
             <Back text='返回博客' href={PATHS.SITE_BLOG} />
             <div className="flex items-center space-x-4 pb-4 pt-8 text-sm text-muted-foreground">
                 <p>发布于&nbsp;&nbsp;{prettyDateWithWeekday(blog.createdAt)}</p>

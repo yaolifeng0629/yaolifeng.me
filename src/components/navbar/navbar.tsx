@@ -2,17 +2,20 @@
 
 import React from 'react';
 
-import { useScroll } from 'ahooks';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { Logo } from '../logo';
-import { NextLink } from '../next-link';
+import { useScroll } from 'ahooks';
 
-import { navItems } from './config';
+import { cn } from '@/utils/utils';
 
 import { NICKNAME, PATHS, WEBSITE } from '@/constants';
-import { cn } from '@/utils/utils';
+
+import { navItems } from './config';
+import { MobileNav } from './mobile-nav';
+
+import { Logo } from '../logo';
+import { NextLink } from '../next-link';
 
 export const Navbar = () => {
     const scroll = useScroll(() => document);
@@ -21,12 +24,12 @@ export const Navbar = () => {
     return (
         <header
             className={cn(
-                'w-full sticky top-0 backdrop-blur transition-[background-color,border-width] border-x-0 border-[#232329] flex justify-center z-10',
-                (scroll?.top ?? 0) > 60 && 'bg-background/50 border-b border-[#232329]'
+                'w-full sticky top-0 backdrop-blur transition-[background-color,border-width] border-x-0  flex justify-center z-10',
+                (scroll?.top ?? 0) > 60 && 'bg-background/50 border-b border-border/50',
             )}
         >
-            <div className="flex h-16 w-full items-center p-4 sm:p-8 md:max-w-screen-md 2xl:max-w-screen-xl">
-                <NextLink href={PATHS.SITE_HOME} className={cn('mr-4 flex')} aria-label={NICKNAME}>
+            <div className="flex h-16 w-full justify-between items-center p-4 sm:p-8 md:max-w-screen-md 2xl:max-w-screen-xl">
+                <NextLink href={PATHS.SITE_HOME} className={cn('mr-4 hidden sm:flex')} aria-label={NICKNAME}>
                     <Logo />
                     <span className="ml-2 text-base font-semibold text-primary">{WEBSITE}</span>
                 </NextLink>
@@ -38,13 +41,14 @@ export const Navbar = () => {
                             className={cn(
                                 'font-normal text-sm text-muted-foreground transition-colors px-4 py-2',
                                 'hover:font-semibold hover:text-primary ',
-                                pathname === el.link && 'font-semibold text-primary'
+                                pathname === el.link && 'font-semibold text-primary',
                             )}
                         >
                             {el.label}
                         </Link>
                     ))}
                 </div>
+                <MobileNav />
             </div>
         </header>
     );

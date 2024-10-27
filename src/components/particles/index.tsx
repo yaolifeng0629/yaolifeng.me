@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef } from 'react';
 
+// import { useIsMobile } from '@/hooks';
+
 interface ParticleEffectProps {
     particleCount?: number;
     particleColor?: string;
@@ -92,7 +94,11 @@ export default function ParticleEffect({
 }: ParticleEffectProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const animationFrameRef = useRef<number>();
+    // const isMobile = useIsMobile(); // 可以传入自定义断点：useIsMobile(600)
 
+    // if (isMobile) {
+    //     return null;
+    // }
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;

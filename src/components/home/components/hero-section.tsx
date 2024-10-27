@@ -26,7 +26,7 @@ const HeroSection = () => {
             </p>
             <strong
                 className={cn(
-                    `text-5xl md:text-8xl tracking-widest font-black  bg-clip-text  custom-strong bg-gradient-to-r from-cyan-400 to-blue-500`,
+                    `text-4xl md:text-8xl tracking-widest font-black  bg-clip-text  custom-strong bg-gradient-to-r from-cyan-400 to-blue-500`,
                     'animate-fade-up animate-ease-in-out'
                 )}
                 style={{
