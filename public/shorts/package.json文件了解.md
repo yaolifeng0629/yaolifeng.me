@@ -1,6 +1,6 @@
-### `package.json`
+### package.json
 
-### `示例`
+### 示例
 
 -   使用 `create-reate-app` 初始化一个项目，其 `package.json` 配置如下:
 
@@ -37,7 +37,7 @@
 -   `package.json` 常见配置如下：
     [pageage.json](https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/packagejson.png)
 
-### `必须属性`
+### 必须属性
 
 -   `package.json` 必需字段 `name` 和 `version`，如果没有这两个字段，是没有办法执行 `npm install` 命令。
     -   `name`: 文件名称
@@ -69,7 +69,7 @@ npm view react version
 npm view react versions
 ```
 
-### `描述信息`
+### 描述信息
 
 1.  `description`：描述项目包，为一个字符串，可让其他开发者在 npm 搜索中发现我们的项目包
 
@@ -153,7 +153,7 @@ npm repo <package-name>
 npm bugs <package-name>
 ```
 
-### `依赖配置`
+### 依赖配置
 
 -   通常情况下，一个项目可能会依赖一个或多个外部的依赖包，会将他们分配当下面五个属性中:
     `dependencies、devDependencies、peerDependencies、boundledDependencies、optionalDependencies`
@@ -232,7 +232,7 @@ yarn add -D <package-name>
 
 -   注：`engines` 字段中的值只是起到了一个说明的作用，不会要求用户安装的版本必须一致，并且也不会影响依赖包的安装。
 
-### `脚本配置`
+### 脚本配置
 
 1.  `scirpts`: `package.json` 中内置的脚本入口，是键值对的形式，key 为可执行的命令，可以通过 `npm run cmd` 来执行命令，除了运行基本的 script 命令，还可以结合 pre 和 post 完成前置和后续操作。
 
@@ -273,7 +273,7 @@ console.log(process.env.npm_package_config_port); // => 3000
 npm config set foo:port 3001
 ```
 
-### `文件目录`
+### 文件目录
 
 1.  `main`:执行加载的入口文件，在 `Browser` 和 `Node` 环境中都可以使用。值类型为一个字符串
 
@@ -363,7 +363,7 @@ scripts：{
 },
 ```
 
-### `发布配置`
+### 发布配置
 
 1.  `private`: 用来防止我们意外将私有库发布到 npm 服务器上，只需要将该字段设置为 true
 
@@ -419,7 +419,7 @@ scripts：{
 "license": "MIT"
 ```
 
-### `第三方配置`
+### 第三方配置
 
 1.  `typings`：用来指定 TypeScript 的入口文件
 

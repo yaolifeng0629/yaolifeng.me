@@ -430,3 +430,15 @@ git branch --show-current
 ```bash
 git rev-parse --abbrev-ref HEAD
 ```
+
+### 线上代码库如何恢复到某个commit记录？
+```bash
+# 1. 查看提交记录
+git log
+
+# 2. 回退到指定commit记录
+git reset --hard <commit_id>
+
+# 3. 强制推送
+git push origin <branch_name> --force
+```
