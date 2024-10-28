@@ -9,7 +9,7 @@ import { MenuIcon } from 'lucide-react';
 
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-
+import RSS from "@/components/rss";
 import { cn } from '@/utils/utils';
 
 import { SLOGAN, WEBSITE } from '@/constants';
@@ -50,6 +50,7 @@ export const MobileNav = () => {
                             {el.label}
                         </Link>
                     ))}
+                    <RSS/>
                 </div>
             </SheetContent>
         </Sheet>

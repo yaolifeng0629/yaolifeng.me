@@ -20,6 +20,14 @@ export default function RootLayout({
 }>) {
     return (
         <html>
+            <head>
+                <link
+                    rel="alternate"
+                    type="application/rss+xml"
+                    title="姚利锋【博客/片段】"
+                    href="/api/rss"
+                />
+            </head>
             <body className="flex flex-col items-center dark scroll-smooth">
                 <Navbar />
                 <main className="min-h-[calc(100vh-190px)] w-screen max-w-screen-md 2xl:max-w-7xl md:px-10 z-[2] scrollbar-hide overflow-y-auto">
