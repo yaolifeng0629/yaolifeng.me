@@ -26,8 +26,8 @@ export const BlogListItem = ({ blog }: BlogListItemProps) => {
                 'bg-transparent hover:bg-primary-foreground',
             )}
         >
-            <h4 className="mb-2 line-clamp-1 text-xl font-medium">{blog.title}</h4>
-            <p className="mb-3 line-clamp-2 text-sm text-muted-foreground min-h-10 text-gray-300">{blog.description}</p>
+            <h4 className="mb-2 line-clamp-1 text-xl font-medium" title={blog.title}>{blog.title}</h4>
+            <p className="mb-3 line-clamp-2 text-sm text-muted-foreground min-h-10 text-gray-300" title={blog.description}>{blog.description}</p>
             <div className="flex space-x-2 text-xs text-muted-foreground ">
                 <div className="flex h-5 items-center space-x-1">
                     <Calendar className="size-3" />
