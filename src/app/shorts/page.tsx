@@ -44,7 +44,7 @@ function ShortItem({ short }: { short: Short }) {
                             />
                         </Inset> : <ShortImg text={short.description} />
                 }
-                <Text as="p" size="3" className="px-3 py-3 text-gray-50">
+                <Text as="p" size="3" className="px-3 py-3 text-gray-50" title={short.title || short.description}>
                     {short.title || short.description}
                 </Text>
             </Link>
