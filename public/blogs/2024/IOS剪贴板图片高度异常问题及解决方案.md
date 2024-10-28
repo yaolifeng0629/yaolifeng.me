@@ -2,8 +2,7 @@
 
 ## 问题背景
 
-在移动端开发中，当用户复制并粘贴图片时，我们期望图片能够完整显示。然而，在 iOS 设备上会出现一个特殊问题：粘贴后的图片仅显示原高度的约 1% 左右（如下图），导致图片显示不完整。这个问题在 Android 设备上并不存在。
-![alt text](https://qncdn.mopic.mozigu.net/work/143/24/f6ac47c8bd284dd8/fa0f54603b2cb6bdc5daad6fd8e65b8.png)
+在移动端开发中，当用户复制并粘贴图片时，我们期望图片能够完整显示。然而，在 iOS 设备上会出现一个特殊问题：粘贴后的图片仅显示原高度的约 1% 左右（如下图），导致图片显示不完整。这个问题在 Android 设备上并不存在。 ![alt text](https://qncdn.mopic.mozigu.net/work/143/24/f6ac47c8bd284dd8/fa0f54603b2cb6bdc5daad6fd8e65b8.png)
 
 ## 问题现象
 
@@ -22,11 +21,11 @@
 
 以下 HTML 图片属性可能导致渲染异常，导致复制过去只加载了少部分内容：
 
-| 属性          | 说明         | 文档链接                                                                                           |
-| ------------- | ------------ | -------------------------------------------------------------------------------------------------- |
-| decoding      | 图片解码方式 | [MDN - decoding](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#decoding)           |
-| fetchpriority | 加载优先级   | [MDN - fetchpriority](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#fetchpriority) |
-| loading       | 加载策略     | [MDN - loading](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#loading)             |
+| 属性 | 说明 | 文档链接 |
+| --- | --- | --- |
+| decoding | 图片解码方式 | [MDN - decoding](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#decoding) |
+| fetchpriority | 加载优先级 | [MDN - fetchpriority](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#fetchpriority) |
+| loading | 加载策略 | [MDN - loading](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#loading) |
 
 常见的属性配置组合：
 
@@ -123,15 +122,14 @@ function formatHtml(htmlString) {
         2. 退出当前编辑页面
         3. 从草稿列表页面重新刚才编辑的文章即可
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe
+<iframe
+    width="560"
+    height="315"
     src="https://qncdn.mopic.mozigu.net/work/143/24/67cdbec994264463/b2ec6977044fa0c032ffd4df52aad6ef.mp4"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
-  </iframe>
-</div>
+</iframe>
 
 ## 总结
 

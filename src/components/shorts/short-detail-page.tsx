@@ -26,7 +26,7 @@ export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
             <p className="py-4 text-neutral-500">{shorts.description}</p>
 
             <div className="flex">
-                <div className={cn('flex-1', 'border-r border-r-[#2f2f2f] wrapper:pr-14')}>
+                <div className={cn('flex-1', 'wrapper:pr-14')}>
                     {/* 内容 */}
                     {shorts.content ? <BytemdViewer body={shorts.content} /> : <div className="flex items-center justify-center w-full h-full">
                         <div className="flex justify-center items-center space-x-1 text-base text-[#737373]">
@@ -42,13 +42,9 @@ export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
                         </div>
                     </div>}
                     <div className="flex h-5 items-center space-x-1 pb-10 mt-16">
-                        <ul className="mb-1 flex space-x-4 text-xs font-medium text-muted-foreground">
-                            {shorts.tags.map((tag: string, index: React.Key | null | undefined) => (
-                                <li key={index} className="flex items-center">
-                                    <Tag text={tag} />
-                                </li>
-                            ))}
-                        </ul>
+                        {shorts.tags.map((tag: string, index: React.Key | null | undefined) => (
+                            <Tag text={tag} key={index} />
+                        ))}
                     </div>
 
                     <div className='pb-24 '>
