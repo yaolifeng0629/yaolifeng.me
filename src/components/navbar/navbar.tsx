@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 
 import { useScroll } from 'ahooks';
 
+import RSS from "@/components/rss";
 import { cn } from '@/utils/utils';
 
 import { NICKNAME, PATHS, WEBSITE } from '@/constants';
@@ -47,6 +48,7 @@ export const Navbar = () => {
                             {el.label}
                         </Link>
                     ))}
+                    <RSS />
                 </div>
                 <MobileNav />
             </div>

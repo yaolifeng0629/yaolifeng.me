@@ -40,6 +40,7 @@
         "clsx": "^1.2.1",
         "dayjs": "^1.11.10",
         "dotenv": "^16.3.1",
+        "feed": "^4.2.2",
         "hast-util-from-html-isomorphic": "^2.0.0",
         "highlight.js": "^11.9.0",
         "image-size": "^1.1.1",
