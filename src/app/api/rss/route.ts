@@ -28,7 +28,6 @@ interface BlogPost {
     content: string;
 }
 
-// Shorts类型定义
 interface Short {
     id: string;
     url: string;
@@ -40,10 +39,8 @@ interface Short {
     content: string;
 }
 
-// 统一的内容类型
 type ContentItem = BlogPost | Short;
 
-// 从文件系统读取 Markdown 内容
 async function getMarkdownContent(filePath: string): Promise<string> {
     try {
         const fullPath = path.join(process.cwd(), 'public', filePath);
@@ -55,7 +52,6 @@ async function getMarkdownContent(filePath: string): Promise<string> {
     }
 }
 
-// 处理单个内容项
 async function processContentItem(item: ContentItem, type: 'blog' | 'short', feed: Feed) {
     try {
         const markdownContent = await getMarkdownContent(item.content);
@@ -92,23 +88,20 @@ export async function GET() {
             generator: 'Feed for Node.js',
             author: AUTHOR,
             feedLinks: {
-                rss2: `${SITE_URL}/api/rss`, // XML format
-                json: `${SITE_URL}/api/rss?format=json`, // JSON format
+                rss2: `${SITE_URL}/api/rss`,
+                json: `${SITE_URL}/api/rss?format=json`,
             },
         });
 
-        // 合并并按时间排序所有内容
         const allContent = [
             ...blogPosts.map((post) => ({ ...post, type: 'blog' as const })),
             ...shorts.map((short) => ({ ...short, type: 'short' as const })),
         ].sort((a, b) => b.createdAt - a.createdAt);
 
-        // 处理所有内容
         for (const item of allContent) {
             await processContentItem(item, item.type, feed);
         }
 
-        // 设置响应头和内容
         return new NextResponse(feed.rss2(), {
             headers: {
                 'Content-Type': 'application/xml',

@@ -153,7 +153,7 @@ export default function Page() {
             >
                 <h3>其它</h3>
                 <ul>
-                    <li>wezTerm（xTerminal） + Fira Code，舒服的很</li>
+                    <li>wezTerm（xTerminal） + Fira Code，用起来还不错</li>
                     {/* <li>
                         用过 <IconLogoCentOS className="mx-1 translate-y-0.5" />
                         CentOS、
