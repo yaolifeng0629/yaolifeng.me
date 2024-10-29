@@ -50,7 +50,9 @@ export const MobileNav = () => {
                             {el.label}
                         </Link>
                     ))}
-                    <RSS/>
+                    <div className='mt-4 pl-4'>
+                        <RSS/>
+                    </div>
                 </div>
             </SheetContent>
         </Sheet>

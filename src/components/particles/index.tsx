@@ -1,9 +1,6 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-
-// import { useIsMobile } from '@/hooks';
-
 interface ParticleEffectProps {
     particleCount?: number;
     particleColor?: string;
@@ -11,7 +8,7 @@ interface ParticleEffectProps {
     maxParticleSize?: number;
     minSpeed?: number;
     maxSpeed?: number;
-    fadeInDuration?: number; // 新增渐显动画持续时间参数(毫秒)
+    fadeInDuration?: number; // 渐显动画持续时间参数(毫秒)
 }
 
 class Particle {
@@ -21,9 +18,9 @@ class Particle {
     speedX: number;
     speedY: number;
     color: string;
-    opacity: number; // 新增透明度属性
-    fadeInStart: number; // 新增开始渐显的时间戳
-    fadeInDuration: number; // 新增渐显持续时间
+    opacity: number; // 透明度属性
+    fadeInStart: number; // 开始渐显的时间戳
+    fadeInDuration: number; // 渐显持续时间
 
     constructor(
         canvas: HTMLCanvasElement,
@@ -33,7 +30,7 @@ class Particle {
         minSpeed: number,
         maxSpeed: number,
         fadeInDuration: number,
-        delayIndex: number, // 新增延迟索引参数
+        delayIndex: number, // 延迟索引参数
     ) {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -94,11 +91,7 @@ export default function ParticleEffect({
 }: ParticleEffectProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const animationFrameRef = useRef<number>();
-    // const isMobile = useIsMobile(); // 可以传入自定义断点：useIsMobile(600)
 
-    // if (isMobile) {
-    //     return null;
-    // }
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -106,31 +99,54 @@ export default function ParticleEffect({
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
-        const resizeCanvas = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        let particles: Particle[] = [];
+        let isCurrentlyDesktop = window.matchMedia('(min-width: 768px)').matches;
+
+        const initializeParticles = () => {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(
+                    new Particle(
+                        canvas,
+                        particleColor,
+                        minParticleSize,
+                        maxParticleSize,
+                        minSpeed,
+                        maxSpeed,
+                        fadeInDuration,
+                        i,
+                    ),
+                );
+            }
         };
 
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
+        const resizeCanvas = () => {
+            const wasDesktop = isCurrentlyDesktop;
+            isCurrentlyDesktop = window.matchMedia('(min-width: 768px)').matches;
 
-        const particles: Particle[] = [];
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(
-                new Particle(
-                    canvas,
-                    particleColor,
-                    minParticleSize,
-                    maxParticleSize,
-                    minSpeed,
-                    maxSpeed,
-                    fadeInDuration,
-                    i, // 将索引传递给粒子构造函数
-                ),
-            );
-        }
+            if (isCurrentlyDesktop) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                if (!wasDesktop) {
+                    // 如果之前不是桌面模式，现在是，则重新初始化粒子
+                    initializeParticles();
+                    if (!animationFrameRef.current) {
+                        animationFrameRef.current = requestAnimationFrame(animate);
+                    }
+                }
+            } else {
+                canvas.width = 0;
+                canvas.height = 0;
+                if (animationFrameRef.current) {
+                    cancelAnimationFrame(animationFrameRef.current);
+                    animationFrameRef.current = undefined;
+                }
+            }
+        };
 
         const animate = (currentTime: number) => {
+            if (!isCurrentlyDesktop) return;
+
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particles.forEach((particle) => {
                 particle.update(canvas, currentTime);
@@ -139,15 +155,26 @@ export default function ParticleEffect({
             animationFrameRef.current = requestAnimationFrame(animate);
         };
 
-        animationFrameRef.current = requestAnimationFrame(animate);
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const handleOrientationChange = () => {
+            setTimeout(resizeCanvas, 100);
+        };
+        window.addEventListener('orientationchange', handleOrientationChange);
+
+        if (isCurrentlyDesktop) {
+            initializeParticles();
+            animationFrameRef.current = requestAnimationFrame(animate);
+        }
 
         return () => {
             window.removeEventListener('resize', resizeCanvas);
+            window.removeEventListener('orientationchange', handleOrientationChange);
             if (animationFrameRef.current) {
                 cancelAnimationFrame(animationFrameRef.current);
             }
         };
     }, [particleCount, particleColor, minParticleSize, maxParticleSize, minSpeed, maxSpeed, fadeInDuration]);
-
-    return <canvas ref={canvasRef} className="fixed inset-0 z-[0]" />;
+    return <canvas ref={canvasRef} className="fixed inset-0 z-[0] hidden md:block" />;
 }
