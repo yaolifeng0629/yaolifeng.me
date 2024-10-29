@@ -35,7 +35,7 @@ export const BILIBILI_PAGE = 'https://space.bilibili.com/480410188';
 export const WEBSITE = `${NICKNAME}`;
 
 /** Slogan */
-export const SLOGAN = '努力做一个更好的程序员';
+export const SLOGAN = '极度投入，深度沉浸，边界清晰！';
 
 // /** 网站ICP备案号 */
 // export const BEI_AN_NUMBER = '赣ICP备2024026230号';

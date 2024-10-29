@@ -6,10 +6,6 @@ import { type Blog } from '../types';
 
 import { BlogListItem } from './blog-list-item';
 
-type BlogListProps = {
-    blog: never;
-};
-
 export const BlogList = ({ blogs }: Blog) => {
     if (!blogs.length) {
         return (
