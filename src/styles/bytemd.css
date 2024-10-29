@@ -227,20 +227,3 @@
     display: inline-block;
     vertical-align: middle;
 }
-
-.inline-code {
-    background-color: rgba(175, 184, 193, 0.2);
-    padding: 0.2em 0.4em;
-    border-radius: 6px;
-    font-family:
-        ui-monospace,
-        SFMono-Regular,
-        SF Mono,
-        Menlo,
-        Consolas,
-        Liberation Mono,
-        monospace;
-    font-size: 85%;
-    margin: 0;
-    word-break: break-word;
-}
