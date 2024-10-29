@@ -37,7 +37,6 @@ export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
                                     fill='currentColor' fill-rule='evenodd' />
                             </svg>
 
-
                             <div>加载中 ...</div>
                         </div>
                     </div>}

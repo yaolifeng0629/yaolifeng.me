@@ -191,7 +191,7 @@ export default [
         description:
             '在使用Visual Studio Code（VSCode）进行前端开发时，如何高效利用其各种功能和插件来提升开发效率。内容可能包括快捷键的使用、代码片段的创建与管理、插件推荐与配置、调试技巧、版本控制集成、以及如何自定义工作区设置等。通过这些技巧的总结，开发者可以更好地利用VSCode的强大功能，从而在前端开发过程中节省时间、减少错误，并提高整体开发体验。',
         tags: [BUILD_TOOLS, CODE_QUALITY, VERSION_CONTROL],
-        content: '/shorts/VSCode使用技巧总结.md',
+        content: '/shorts/vscode使用技巧总结.md',
     },
     {
         id: '591e7724-2739-428d-8d59-2767c234d13e',
