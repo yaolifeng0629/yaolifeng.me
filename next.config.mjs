@@ -5,6 +5,8 @@ const withBundleAnalyzer = bundleAnalyzer({
     enabled: process.env.ANALYZE === 'true',
 });
 
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     // build 阶段禁止 eslint
@@ -46,4 +48,8 @@ const nextConfig = {
     reactStrictMode: false, // Strict patterns are primarily used to identify unsafe lifecycles, outdated APIs, etc. However, in development mode, the component is executed twice, which means that the interface is called multiple times, so turn off the mode.
 };
 
-export default MillionLint.next({ rsc: true })(withBundleAnalyzer(nextConfig));
+const lastConfig = isProd
+    ? withBundleAnalyzer(nextConfig)
+    : MillionLint.next({ rsc: true })(withBundleAnalyzer(nextConfig));
+
+export default lastConfig;
