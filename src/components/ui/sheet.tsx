@@ -52,7 +52,7 @@ interface SheetContentProps
     extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
         VariantProps<typeof sheetVariants> {}
 
-const SheetContent = React.forwardRef<React.ElementRef<typeof SheetPrimitive.Content>, SheetContentProps>(
+const SheetContent = React.memo(React.forwardRef<React.ElementRef<typeof SheetPrimitive.Content>, SheetContentProps>(
     ({ side = 'right', className, children, ...props }, ref) => (
         <SheetPortal>
             <SheetOverlay />
@@ -65,7 +65,7 @@ const SheetContent = React.forwardRef<React.ElementRef<typeof SheetPrimitive.Con
             </SheetPrimitive.Content>
         </SheetPortal>
     ),
-);
+));
 SheetContent.displayName = SheetPrimitive.Content.displayName;
 
 const SheetHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (

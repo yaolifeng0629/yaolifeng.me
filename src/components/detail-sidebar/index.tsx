@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
+import React, { memo } from 'react';
 import { cn } from '@/utils/utils';
 type DetailSidebarProps = React.PropsWithChildren;
-export const DetailSidebar = ({ children }: DetailSidebarProps) => {
+export const DetailSidebar = memo(({ children }: DetailSidebarProps) => {
     return (
         <div
             className={cn(
@@ -14,4 +14,4 @@ export const DetailSidebar = ({ children }: DetailSidebarProps) => {
             {children}
         </div>
     );
-};
+});;

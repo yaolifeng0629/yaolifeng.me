@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import { useMount } from 'ahooks';
 import { load } from 'cheerio';
 import Link from 'next/link';
@@ -9,7 +9,7 @@ interface TocItem extends OptionItem<string> {
     level: 'h2' | 'h3';
 }
 
-export const MarkdownTOC = () => {
+export const MarkdownTOC = memo(() => {
     const [tocList, setTocList] = useState<TocItem[]>([]);
     const [activeId, setActiveId] = useState<string>('');
 
@@ -84,4 +84,4 @@ export const MarkdownTOC = () => {
             </ul>
         </>
     );
-};
+});;

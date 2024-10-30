@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { Viewer } from '@bytemd/react';
 
@@ -11,5 +11,9 @@ type BytemdViewerProps = {
 };
 
 export const BytemdViewer = ({ body }: BytemdViewerProps) => {
-    return <Viewer value={body} plugins={plugins} sanitize={sanitize} />;
+    const memoizedViewer = useMemo(() => (
+        <Viewer value={body} plugins={plugins} sanitize={sanitize} />
+    ), [body]);
+
+    return memoizedViewer;
 };
