@@ -4,15 +4,14 @@ import gfm from '@bytemd/plugin-gfm';
 import gfm_zhHans from '@bytemd/plugin-gfm/lib/locales/zh_Hans.json';
 import highlightSSR from '@bytemd/plugin-highlight-ssr';
 import mediumZoom from '@bytemd/plugin-medium-zoom';
-
 import { type EditorProps } from '@bytemd/react';
+import { merge } from 'lodash-es';
+import { common } from 'lowlight';
 
 // highlight需要额外扩充的高亮语言
 import asciidoc from 'highlight.js/lib/languages/asciidoc';
 import dart from 'highlight.js/lib/languages/dart';
 import nginx from 'highlight.js/lib/languages/nginx';
-import { merge } from 'lodash-es';
-import { common } from 'lowlight';
 
 import { codeBlockPlugin, headingPlugin, prettyLinkPlugin } from './plugins';
 
@@ -32,12 +31,12 @@ export const plugins = [
             // 默认common配置中没有以下几个语言高亮配置，这里我们自己加上
             dart: dart, // flutter代码会用到dart
             nginx: nginx, // nginx配置文件高亮
-            asciidoc: asciidoc // asciidoc高亮, 控制台输出信息高亮
-        }
+            asciidoc: asciidoc, // asciidoc高亮, 控制台输出信息高亮
+        },
     }),
     codeBlockPlugin(),
     prettyLinkPlugin(),
-    headingPlugin()
+    headingPlugin(),
 ];
 
 export const sanitize: EditorProps['sanitize'] = (schema) => {
@@ -54,9 +53,9 @@ export const sanitize: EditorProps['sanitize'] = (schema) => {
                 'border',
                 'frameborder',
                 'framespacing',
-                'allowfullscreen'
-            ]
-        }
+                'allowfullscreen',
+            ],
+        },
     } as typeof schema);
 
     return customerSchema;

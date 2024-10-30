@@ -38,13 +38,12 @@ export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
                                     fill='currentColor' fill-rule='evenodd' />
                             </svg>
 
-
                             <div>加载中 ...</div>
                         </div>
                     </div>}
                     <div className="flex h-5 items-center space-x-1 pb-10 mt-16">
                         {blog.tags.map((tag: string, index: React.Key | null | undefined) => (
-                            <Tag text={tag} key={index}/>
+                            <Tag text={tag} key={index} />
                         ))}
                     </div>
 
