@@ -28,25 +28,25 @@ export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
                 <title>{shorts.title}</title>
                 <meta name="description" content={shorts.description} />
                 <link rel="canonical" href={`/shorts/${shorts.slug}`} />
+                <NextSeo
+                    title={shorts.title}
+                    description={shorts.description}
+                    openGraph={{
+                        title: shorts.title,
+                        description: shorts.description,
+                        url: siteUrl + '/shorts/' + shorts.slug,
+                        images: [
+                            {
+                                url: shorts.url,
+                                width: 300,
+                                height: 300,
+                                alt: shorts.slug,
+                            },
+                        ],
+                    }}
+                />
             </Head>
 
-            <NextSeo
-                title={shorts.title}
-                description={shorts.description}
-                openGraph={{
-                    title: shorts.title,
-                    description: shorts.description,
-                    url: siteUrl + '/shorts/' + shorts.slug,
-                    images: [
-                        {
-                            url: shorts.url,
-                            width: 300,
-                            height: 300,
-                            alt: shorts.slug,
-                        },
-                    ],
-                }}
-            />
             <div className="flex items-center space-x-4 pb-4 pt-8 text-sm text-muted-foreground">
                 <p>发布于&nbsp;&nbsp;{prettyDateWithWeekday(shorts.createdAt)}</p>
             </div>
