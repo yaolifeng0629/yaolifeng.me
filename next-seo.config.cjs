@@ -4,11 +4,11 @@ module.exports = {
     openGraph: {
       type: 'website',
       locale: 'en_IE',
-      url: 'https://yaolifeng.netlify.app/',
+      url: 'https://yaolifeng.vercel.app/',
       site_name: '姚利锋',
       images: [
         {
-          url: 'https://yaolifeng.netlify.app/images/Immerse-light.svg',
+          url: 'https://yaolifeng.vercel.app/images/Immerse-light.svg',
           width: 800,
           height: 600,
           alt: 'Immerse',
