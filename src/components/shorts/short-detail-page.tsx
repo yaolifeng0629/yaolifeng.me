@@ -13,9 +13,6 @@ import { type Blog as Shorts } from './types';
 import { PATHS } from '@/constants';
 import { cn, prettyDateWithWeekday } from '@/utils/utils';
 
-import { NextSeo } from 'next-seo';
-const siteUrl = process.env.SITE_URL || 'https://yaolifeng.vercel.app';
-
 type BlogDetailProps = {
     shorts: Shorts;
 };
@@ -24,27 +21,11 @@ export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
     return (
         <Wrapper className="flex flex-col pt-8">
             <Back text='返回片段' href={PATHS.SITE_SNIPPET} />
+
             <Head>
                 <title>{shorts.title}</title>
                 <meta name="description" content={shorts.description} />
                 <link rel="canonical" href={`/shorts/${shorts.slug}`} />
-                <NextSeo
-                    title={shorts.title}
-                    description={shorts.description}
-                    openGraph={{
-                        title: shorts.title,
-                        description: shorts.description,
-                        url: siteUrl + '/shorts/' + shorts.slug,
-                        images: [
-                            {
-                                url: shorts.url,
-                                width: 300,
-                                height: 300,
-                                alt: shorts.slug,
-                            },
-                        ],
-                    }}
-                />
             </Head>
 
             <div className="flex items-center space-x-4 pb-4 pt-8 text-sm text-muted-foreground">

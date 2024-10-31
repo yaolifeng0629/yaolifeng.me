@@ -13,9 +13,6 @@ import { type Blog } from './types';
 import { PATHS } from '@/constants';
 import { cn, prettyDateWithWeekday } from '@/utils/utils';
 
-import { NextSeo } from 'next-seo';
-const siteUrl = process.env.SITE_URL || 'https://yaolifeng.vercel.app';
-
 type BlogDetailProps = {
     blog: Blog;
 };
@@ -29,23 +26,6 @@ export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
                 <title>{blog.title}</title>
                 <meta name="description" content={blog.description} />
                 <link rel="canonical" href={`/blog/${blog.slug}`} />
-                <NextSeo
-                    title={blog.title}
-                    description={blog.description}
-                    openGraph={{
-                        title: blog.title,
-                        description: blog.description,
-                        url: siteUrl + '/blog/' + blog.slug,
-                        images: [
-                            {
-                                url: `${siteUrl}/images/Immerse-light.svg`,
-                                width: 300,
-                                height: 300,
-                                alt: blog.slug,
-                            },
-                        ],
-                    }}
-                />
             </Head>
 
             <div className="flex items-center space-x-4 pb-4 pt-8 text-sm text-muted-foreground">
