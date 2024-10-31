@@ -1,3 +1,5 @@
+## Vscode 使用技巧总结
+
 ### `3.npm 创建`
 
 -   packjson -> npm init -y 一直回车（always enter） npm init 每一步配置 （every setop config）

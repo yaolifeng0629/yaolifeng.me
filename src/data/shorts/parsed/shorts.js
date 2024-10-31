@@ -52,7 +52,7 @@ import {
 export default [
     {
         id: 'b795d11d-f019-4daf-9a9f-03766ee61acb',
-        url: 'https://qncdn.mopic.mozigu.net/work/143/24/b8e6969783864817/cursor.jpg',
+        url: '/other/shorts/cursor.jpg',
         slug: 'cursor_free_guide',
         createdAt: 1729757310050,
         title: '反复白嫖 Cursor 详细指南',
@@ -63,7 +63,7 @@ export default [
     },
     {
         id: 'c9febbd3-2529-4723-b121-5554748749c5',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/chrome_usage_tips_summary.png',
+        url: '/other/shorts/chrome_usage_tips_summary.png',
         slug: 'chrome_usage_tips_summary',
         createdAt: 1729499272008,
         title: 'Chrome使用技巧总结',
@@ -74,7 +74,7 @@ export default [
     },
     {
         id: 'fa2ef980-246a-4dac-9c2e-e9167ba08b34',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/github_usage_tips_summary.png',
+        url: '/other/shorts/github_usage_tips_summary.png',
         slug: 'github_usage_tips_summary',
         createdAt: 1729499272068,
         title: 'Github使用技巧总结',
@@ -85,7 +85,7 @@ export default [
     },
     {
         id: '32bd308f-12d1-4efc-8f58-aa326e9275cc',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/git_usage_tips_summary.png',
+        url: '/other/shorts/git_usage_tips_summary.png',
         slug: 'git_usage_tips_summary',
         createdAt: 1729499272078,
         title: 'Git使用技巧总结',
@@ -96,7 +96,7 @@ export default [
     },
     {
         id: 'c011b709-9064-4829-a40e-748dd0f594c2',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/monorepo_pnpm_integration.png',
+        url: '/other/shorts/monorepo_pnpm_integration.png',
         slug: 'monorepo_pnpm_integration',
         createdAt: 1729499995761,
         title: 'Monorepo和Pnpm共同使用',
@@ -107,7 +107,7 @@ export default [
     },
     {
         id: '86a71193-f1d4-4ada-88b0-1c01583013d2',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/node_npm_tips_summary.png',
+        url: '/other/shorts/node_npm_tips_summary.png',
         slug: 'node_npm_tips_summary',
         createdAt: 1729499272128,
         title: 'Node或NPM使用技巧总结',
@@ -118,7 +118,7 @@ export default [
     },
     {
         id: 'e82d956b-a1a6-4317-ba6e-b52fbc2355a4',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/npm_package_publishing_tips.png',
+        url: '/other/shorts/npm_package_publishing_tips.png',
         slug: 'npm_package_publishing_tips',
         createdAt: 1729499766895,
         title: 'NPM发包那些事',
@@ -129,7 +129,7 @@ export default [
     },
     {
         id: 'a3b78bff-56f9-44ba-905a-b2ae2ad8787f',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/understanding_package_json.png',
+        url: '/other/shorts/understanding_package_json.png',
         slug: 'understanding_package_json',
         createdAt: 1729499781306,
         title: 'package.json文件了解',
@@ -140,7 +140,7 @@ export default [
     },
     {
         id: '9e6bc6ee-8c0d-460a-ad26-502e6ccb72b7',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/promise_principles_summary.png',
+        url: '/other/shorts/promise_principles_summary.png',
         slug: 'promise_principles_summary',
         createdAt: 1729499805787,
         title: 'Promise原理学习总结',
@@ -151,7 +151,7 @@ export default [
     },
     {
         id: 'd793a1af-3d13-481e-8fe0-743afa9eea36',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/require_loader_principles.png',
+        url: '/other/shorts/require_loader_principles.png',
         slug: 'require_loader_principles',
         createdAt: 1729499956343,
         title: 'require加载器的原理',
@@ -162,7 +162,7 @@ export default [
     },
     {
         id: '296edcaa-dfe3-4f8b-97d9-8672ee027567',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/dynamic_shell_path_config.png',
+        url: '/other/shorts/dynamic_shell_path_config.png',
         slug: 'dynamic_shell_path_config',
         createdAt: 1729499846517,
         title: 'shell路径动态配置',
@@ -173,7 +173,7 @@ export default [
     },
     {
         id: 'fc843a3a-5ea8-4111-83b3-cd1a70657c8e',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/vimium_c_plugin_shortcuts.png',
+        url: '/other/shorts/vimium_c_plugin_shortcuts.png',
         slug: 'vimium_c_plugin_shortcuts',
         createdAt: 1729499730292,
         title: 'Vimium-C插件快捷键',
@@ -184,18 +184,18 @@ export default [
     },
     {
         id: '8c10bff4-3810-46ab-91e8-b4dd1b65b501',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/vscode_usage_tips_summary.png',
+        url: '/other/shorts/vscode_usage_tips_summary.png',
         slug: 'vscode_usage_tips_summary',
         createdAt: 1729499272155,
         title: 'VSCode使用技巧总结',
         description:
             '在使用Visual Studio Code（VSCode）进行前端开发时，如何高效利用其各种功能和插件来提升开发效率。内容可能包括快捷键的使用、代码片段的创建与管理、插件推荐与配置、调试技巧、版本控制集成、以及如何自定义工作区设置等。通过这些技巧的总结，开发者可以更好地利用VSCode的强大功能，从而在前端开发过程中节省时间、减少错误，并提高整体开发体验。',
         tags: [BUILD_TOOLS, CODE_QUALITY, VERSION_CONTROL],
-        content: '/shorts/vscode使用技巧总结.md',
+        content: '/shorts/VSCode使用技巧总结.md',
     },
     {
         id: '591e7724-2739-428d-8d59-2767c234d13e',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/web_frontend_unfamiliar_summary.png',
+        url: '/other/shorts/web_frontend_unfamiliar_summary.png',
         slug: 'web_frontend_unfamiliar_summary',
         createdAt: 1729499272177,
         title: 'Web前端陌生点总结',
@@ -206,7 +206,7 @@ export default [
     },
     {
         id: 'e0a84d3a-87da-493f-97a5-3f549a5d5302',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/windows_gitea_local_git_setup.png',
+        url: '/other/shorts/windows_gitea_local_git_setup.png',
         slug: 'windows_gitea_local_git_setup',
         createdAt: 1729499861671,
         title: 'Windows使用Gitea搭建本地 Git',
@@ -217,7 +217,7 @@ export default [
     },
     {
         id: 'b454747e-213b-4be4-bad9-90b25f6e77d8',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/problem_solving_techniques.png',
+        url: '/other/shorts/problem_solving_techniques.png',
         slug: 'problem_solving_techniques',
         createdAt: 1729499306829,
         title: '刷题方法',
@@ -228,7 +228,7 @@ export default [
     },
     {
         id: '42876b6e-4e95-43dd-8322-181016b62dcb',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/optimize_mini_program.png',
+        url: '/other/shorts/optimize_mini_program.png',
         slug: 'optimize_mini_program',
         createdAt: 1729499899058,
         title: '如何优化小程序',
@@ -239,7 +239,7 @@ export default [
     },
     {
         id: 'bcf88d12-d1da-44fc-9d3c-8f24a6b94a8f',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/crafting_quality_tech_shares.png',
+        url: '/other/shorts/crafting_quality_tech_shares.png',
         slug: 'crafting_quality_tech_shares',
         createdAt: 1729499264618,
         title: '如何做一个有质量的技术分享',
@@ -250,7 +250,7 @@ export default [
     },
     {
         id: 'bb1d8c9b-b6cc-4070-9835-6492c6a94dab',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/distinguish_good_vs_bad_resources.png',
+        url: '/other/shorts/distinguish_good_vs_bad_resources.png',
         slug: 'distinguish_good_vs_bad_resources',
         createdAt: 1729499309198,
         title: '如何区分好资料还是坏资料',
@@ -261,7 +261,7 @@ export default [
     },
     {
         id: '22dc076f-34ad-4c80-97f0-95dfa39ceadf',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/publish_your_own_npm_package.png',
+        url: '/other/shorts/publish_your_own_npm_package.png',
         slug: 'publish_your_own_npm_package',
         createdAt: 1729499812052,
         title: '如何发布自己的NPM包',
@@ -272,7 +272,7 @@ export default [
     },
     {
         id: '393b5949-bc63-4afc-848a-b9ded2a7448c',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/how_to_ask_questions.png',
+        url: '/other/shorts/how_to_ask_questions.png',
         slug: 'how_to_ask_questions',
         createdAt: 1729499272112,
         title: '如何提问问题',
@@ -283,7 +283,7 @@ export default [
     },
     {
         id: '99edeabf-26ee-4898-b3d7-0f3a3fdc373e',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/computer_usage_tips_summary.png',
+        url: '/other/shorts/computer_usage_tips_summary.png',
         slug: 'computer_usage_tips_summary',
         createdAt: 1729499272041,
         title: '电脑使用技巧总结',
@@ -294,7 +294,7 @@ export default [
     },
     {
         id: 'b67db19d-ae73-4c44-ab28-8424d4dbd4d9',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/programmers_career_control.png',
+        url: '/other/shorts/programmers_career_control.png',
         slug: 'programmers_career_control',
         createdAt: 1729499268280,
         title: '程序员如何把控自己的职业',
@@ -305,7 +305,7 @@ export default [
     },
     {
         id: '1e23ee53-6b59-4925-9f9d-662a8464daa3',
-        url: 'https://cdn.jsdelivr.net/gh/yaolifeng0629/oss@main/images/random_avatar_api.png',
+        url: '/other/shorts/random_avatar_api.png',
         slug: 'random_avatar_api',
         createdAt: 1729499823313,
         title: '随机头像API',

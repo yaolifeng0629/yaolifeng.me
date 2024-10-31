@@ -1,4 +1,7 @@
 'use client';
+
+import Head from 'next/head';
+
 import { BytemdViewer } from '@/components/bytemd';
 import { DetailSidebar } from '@/components/detail-sidebar';
 import { MarkdownTOC } from '@/components/markdown-toc';
@@ -10,7 +13,6 @@ import { type Blog } from './types';
 import { PATHS } from '@/constants';
 import { cn, prettyDateWithWeekday } from '@/utils/utils';
 
-
 type BlogDetailProps = {
     blog: Blog;
 };
@@ -19,6 +21,13 @@ export const BlogDetailPage = ({ blog }: BlogDetailProps) => {
     return (
         <Wrapper className="flex flex-col pt-8 overflow-x-hidden">
             <Back text='返回博客' href={PATHS.SITE_BLOG} />
+
+            <Head>
+                <title>{blog.title}</title>
+                <meta name="description" content={blog.description} />
+                <link rel="canonical" href={`/blog/${blog.slug}`} />
+            </Head>
+
             <div className="flex items-center space-x-4 pb-4 pt-8 text-sm text-muted-foreground">
                 <p>发布于&nbsp;&nbsp;{prettyDateWithWeekday(blog.createdAt)}</p>
             </div>

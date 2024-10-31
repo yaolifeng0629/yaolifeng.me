@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -22,6 +22,15 @@ export const Navbar = () => {
     const scroll = useScroll(() => document);
     const pathname = usePathname();
 
+    const memoizedNextLink = useMemo(() => (
+        <NextLink href={PATHS.SITE_HOME} className={cn('mr-4 hidden sm:flex')} aria-label={NICKNAME}>
+            <Logo />
+            <span className="ml-2 text-base font-semibold text-primary">{WEBSITE}</span>
+        </NextLink>
+    ), []);
+
+    const memoizedRSS = useMemo(() => <RSS />, []);
+
     return (
         <header
             className={cn(
@@ -30,10 +39,7 @@ export const Navbar = () => {
             )}
         >
             <div className="flex h-16 w-full justify-between items-center p-4 sm:p-8 md:max-w-screen-md 2xl:max-w-screen-xl">
-                <NextLink href={PATHS.SITE_HOME} className={cn('mr-4 hidden sm:flex')} aria-label={NICKNAME}>
-                    <Logo />
-                    <span className="ml-2 text-base font-semibold text-primary">{WEBSITE}</span>
-                </NextLink>
+                {memoizedNextLink}
                 <div className="mr-8 hidden h-16 flex-1 items-center justify-end text-base font-medium sm:flex">
                     {navItems.map((el) => (
                         <Link
@@ -48,7 +54,7 @@ export const Navbar = () => {
                             {el.label}
                         </Link>
                     ))}
-                    <RSS />
+                    {memoizedRSS}
                 </div>
                 <MobileNav />
             </div>

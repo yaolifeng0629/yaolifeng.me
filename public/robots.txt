@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://yaolifeng.vercel.app
+
+# Sitemaps
+Sitemap: https://yaolifeng.vercel.app/sitemap.xml

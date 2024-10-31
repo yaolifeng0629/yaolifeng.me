@@ -10,6 +10,7 @@
         "start": "next start -p 3001",
         "test": "vitest run",
         "format": "prettier --write --cache .",
+        "postbuild": "next-sitemap --config next-sitemap.config.cjs",
         "format-check": "prettier --check --cache .",
         "parse:md": "node src/scripts/parseMarkdown.js"
     },
@@ -24,6 +25,7 @@
         "@iconify-json/fa6-brands": "^1.1.18",
         "@iconify-json/logos": "^1.1.42",
         "@iconify-json/skill-icons": "^1.1.8",
+        "@million/lint": "^1.0.11",
         "@radix-ui/react-label": "^2.0.2",
         "@radix-ui/react-scroll-area": "^1.0.5",
         "@radix-ui/react-separator": "^1.0.3",
@@ -52,7 +54,6 @@
         "marked": "^13.0.3",
         "mini-svg-data-uri": "^1.4.4",
         "next": "14.2.3",
-        "next-auth": "5.0.0-beta.16",
         "next-sitemap": "^4.2.3",
         "next-themes": "^0.3.0",
         "react": "^18.3.1",

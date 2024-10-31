@@ -1,3 +1,6 @@
+'use client';
+
+import Head from 'next/head';
 
 import { BytemdViewer } from '@/components/bytemd';
 import { DetailSidebar } from '@/components/detail-sidebar';
@@ -18,6 +21,13 @@ export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
     return (
         <Wrapper className="flex flex-col pt-8">
             <Back text='返回片段' href={PATHS.SITE_SNIPPET} />
+
+            <Head>
+                <title>{shorts.title}</title>
+                <meta name="description" content={shorts.description} />
+                <link rel="canonical" href={`/shorts/${shorts.slug}`} />
+            </Head>
+
             <div className="flex items-center space-x-4 pb-4 pt-8 text-sm text-muted-foreground">
                 <p>发布于&nbsp;&nbsp;{prettyDateWithWeekday(shorts.createdAt)}</p>
             </div>

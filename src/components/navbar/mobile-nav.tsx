@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -16,16 +16,20 @@ import { SLOGAN, WEBSITE } from '@/constants';
 
 import { navItems } from './config';
 
-export const MobileNav = () => {
+export const MobileNav = React.memo(() => {
     const pathname = usePathname();
     const [open, setOpen] = React.useState(false);
+
+    const triggerButton = useMemo(() => (
+        <Button variant={'outline'} size={'icon'} aria-label="菜单" className={cn('sm:hidden')}>
+            <MenuIcon className="size-4" />
+        </Button>
+    ), []);
 
     return (
         <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-                <Button variant={'outline'} size={'icon'} aria-label="菜单" className={cn('sm:hidden')}>
-                    <MenuIcon className="size-4" />
-                </Button>
+                {triggerButton}
             </SheetTrigger>
             <SheetContent side={'left'}>
                 <SheetHeader>
@@ -57,4 +61,4 @@ export const MobileNav = () => {
             </SheetContent>
         </Sheet>
     );
-};
+});;
