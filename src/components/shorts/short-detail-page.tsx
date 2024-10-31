@@ -1,3 +1,4 @@
+'use client';
 
 import Head from 'next/head';
 
@@ -11,6 +12,9 @@ import Back from '@/components/back';
 import { type Blog as Shorts } from './types';
 import { PATHS } from '@/constants';
 import { cn, prettyDateWithWeekday } from '@/utils/utils';
+
+import { NextSeo } from 'next-seo';
+const siteUrl = process.env.SITE_URL || 'https://yaolifeng.vercel.app';
 
 type BlogDetailProps = {
     shorts: Shorts;
@@ -26,6 +30,23 @@ export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
                 <link rel="canonical" href={`/shorts/${shorts.slug}`} />
             </Head>
 
+            <NextSeo
+                title={shorts.title}
+                description={shorts.description}
+                openGraph={{
+                    title: shorts.title,
+                    description: shorts.description,
+                    url: siteUrl + '/shorts/' + shorts.slug,
+                    images: [
+                        {
+                            url: shorts.url,
+                            width: 300,
+                            height: 300,
+                            alt: shorts.slug,
+                        },
+                    ],
+                }}
+            />
             <div className="flex items-center space-x-4 pb-4 pt-8 text-sm text-muted-foreground">
                 <p>发布于&nbsp;&nbsp;{prettyDateWithWeekday(shorts.createdAt)}</p>
             </div>
