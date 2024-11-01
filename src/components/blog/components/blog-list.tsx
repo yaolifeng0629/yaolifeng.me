@@ -19,7 +19,7 @@ export const BlogList = ({ blogs }: Blog) => {
     return (
         <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 border-blue-700">
             {blogs.map((el: { id: Key | null | undefined }, idx: number) => (
-                <BlogListItem blog={el} />
+                <BlogListItem blog={el} key={idx} />
             ))}
         </ul>
     );
