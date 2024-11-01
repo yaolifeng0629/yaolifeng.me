@@ -2,9 +2,9 @@ import { Key } from 'react';
 
 import { IllustrationNoContent } from '@/components/illustrations';
 
-import { type Blog } from '../types';
-
 import { BlogListItem } from './blog-list-item';
+
+import { type Blog } from '../types';
 
 export const BlogList = ({ blogs }: Blog) => {
     if (!blogs.length) {
@@ -19,15 +19,7 @@ export const BlogList = ({ blogs }: Blog) => {
     return (
         <ul className="grid grid-cols-1 gap-10 md:grid-cols-2 border-blue-700">
             {blogs.map((el: { id: Key | null | undefined }, idx: number) => (
-                <li
-                    key={el.id}
-                    className="animate-fade-up animate-ease-in-out"
-                    style={{
-                        animationDelay: `${(idx + 1) * 200}ms`
-                    }}
-                >
-                    <BlogListItem blog={el} />
-                </li>
+                <BlogListItem blog={el} />
             ))}
         </ul>
     );
