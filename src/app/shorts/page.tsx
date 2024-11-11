@@ -1,8 +1,7 @@
-import { Box, Card, Inset, Text } from '@radix-ui/themes';
+import { Box, Card, Text } from '@radix-ui/themes';
 import { NextPage } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
-// import ShortImg from '@/components/short-img'
+import { ProgressiveImage } from '@/components/progressive-image';
 
 import { getShort, Short } from '@/api/shorts';
 
@@ -36,23 +35,14 @@ function ShortItem({ short }: { short: Short }) {
         <Card size="2" className="border border-[#2f2f2f] rounded-[8px] p-0 overflow-hidden">
             <Link href={`/shorts/${short.slug}`} className="flex flex-col">
                 {
-                    // 使用 Image 组件优化图片加载
-                    <Image
+                    <ProgressiveImage
                         src={photo}
                         alt={short.title}
                         width={300}
                         height={250}
                         layout="responsive"
-                        className='h-full min-h-[150px]'
+                        className="h-full min-h-[150px]"
                     />
-                    // photo ?
-                    //     <Inset clip="padding-box" side="top" pb="current" className='flex justify-center'>
-                    //         <img
-                    //             className='h-full min-h-[150px]'
-                    //             src={photo}
-                    //             alt={short.title}
-                    //         />
-                    //     </Inset> : <ShortImg text={short.description} />
                 }
                 <Text as="p" size="3" className="px-3 py-3 text-gray-50" title={short.title || short.description}>
                     {short.title || short.description}
