@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     title: '姚利锋 | 片段',
     description: '姚利锋 | 片段'
 };
+
+export const runtime = "edge";
+
 export const revalidate = 60;
 
 const Page: NextPage = async () => {

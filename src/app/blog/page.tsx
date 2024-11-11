@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     description: '姚利锋 | 博客'
 };
 
+export const runtime = "edge";
+
 export const revalidate = 60;
 
 export default async function Page() {

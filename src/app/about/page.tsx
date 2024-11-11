@@ -39,6 +39,8 @@ export const metadata: Metadata = {
     description: '姚利锋 | 关于'
 };
 
+export const runtime = "edge";
+
 export const revalidate = 60;
 
 export default function Page() {

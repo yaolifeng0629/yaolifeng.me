@@ -41,6 +41,8 @@ interface Short {
 
 type ContentItem = BlogPost | Short;
 
+export const runtime = "edge";
+
 async function getMarkdownContent(filePath: string): Promise<string> {
     try {
         const fullPath = path.join(process.cwd(), 'public', filePath);
