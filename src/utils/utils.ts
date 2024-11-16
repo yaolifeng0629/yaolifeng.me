@@ -67,7 +67,7 @@ export const toSlashDateString = (date: number | Date) => {
 };
 
 export const prettyDate = (date: number | Date) => {
-    return dayjs(date).locale('zh-cn').format('YYYY年 M月 D日');
+    return dayjs(date).locale('zh-cn').format('YYYY 年 M 月 D 日');
 };
 
 export const prettyDateWithWeekday = (date: number | Date) => {

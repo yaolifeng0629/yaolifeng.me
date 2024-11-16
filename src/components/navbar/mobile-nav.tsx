@@ -31,7 +31,7 @@ export const MobileNav = React.memo(() => {
             <SheetTrigger asChild>
                 {triggerButton}
             </SheetTrigger>
-            <SheetContent side={'left'}>
+            <SheetContent side={'left'} className='pl-0'>
                 <SheetHeader>
                     <SheetTitle>{WEBSITE}</SheetTitle>
                     <SheetDescription>{SLOGAN}</SheetDescription>

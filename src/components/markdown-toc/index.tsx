@@ -1,8 +1,12 @@
 'use client';
-import React, { useEffect, useState, memo } from 'react';
+
+import React, { memo, useEffect, useState } from 'react';
+
+import Link from 'next/link';
+
 import { useMount } from 'ahooks';
 import { load } from 'cheerio';
-import Link from 'next/link';
+
 import { type OptionItem } from '@/types';
 
 interface TocItem extends OptionItem<string> {
@@ -30,7 +34,7 @@ export const MarkdownTOC = memo(() => {
                 toc.push({
                     value: id,
                     label: text,
-                    level
+                    level,
                 });
             }
         });
@@ -38,40 +42,51 @@ export const MarkdownTOC = memo(() => {
         setTocList(toc);
     });
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const headings = document.querySelectorAll('.markdown-body h2, .markdown-body h3');
-            let currentActiveId = '';
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const headings = document.querySelectorAll('.markdown-body h2, .markdown-body h3');
+    //         let currentActiveId = '';
 
-            headings.forEach((heading) => {
-                const { top } = heading.getBoundingClientRect();
-                if (top <= 100) {
-                    currentActiveId = heading.id;
-                }
-            });
+    //         headings.forEach((heading) => {
+    //             const { top } = heading.getBoundingClientRect();
+    //             if (top <= 100) {
+    //                 currentActiveId = heading.id;
+    //             }
+    //         });
 
-            setActiveId(currentActiveId);
-        };
+    //         setActiveId(currentActiveId);
+    //     };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, []);
 
     return (
-        <>
+        <div className="sticky top-[100px] space-y-4 px-4 py-4 border bg-card text-card-foreground shadow-sm mb-20 rounded-md">
             <div>目录</div>
-            <ul className="flex flex-col gap-2 pt-8 text-sm text-muted-foreground overflow-y-auto scrollbar-none">
+            <ul className="flex flex-col gap-2 pt-3 text-sm text-muted-foreground scrollbar-none">
                 {tocList.length > 0 ? (
                     tocList.map((el) => (
                         <li
                             key={el.value}
                             className={`
-                                ${el.level === 'h3' ? 'pl-4 text-[13px]' : ''}
+                                ${el.level === 'h3' ? 'pl-4 text-[12px]' : ''}
                                 ${activeId === el.value ? 'font-bold text-primary' : ''}
                             `}
                         >
                             <Link
                                 href={`#${el.value}`}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    const element = document.getElementById(el.value);
+                                    if (element) {
+                                        const offsetTop = element.offsetTop;
+                                        window.scrollTo({
+                                            top: offsetTop - 100, // 减去100px的偏移量，考虑到顶部导航栏
+                                            behavior: 'smooth'
+                                        });
+                                    }
+                                }}
                                 className="line-clamp-1 text-ellipsis transition-colors hover:text-primary"
                             >
                                 {el.label}
@@ -82,6 +97,6 @@ export const MarkdownTOC = memo(() => {
                     <li>无目录</li>
                 )}
             </ul>
-        </>
+        </div>
     );
-});;
+});

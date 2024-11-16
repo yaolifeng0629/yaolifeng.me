@@ -15,9 +15,9 @@ const HeroSection = () => {
     const getDelay = () => (delay += 200);
 
     return (
-        <div className="flex flex-col justify-center gap-5 px-6 md:px-10 ">
+        <div className="flex flex-col justify-center gap-3 md:gap-5 px-4 md:px-10 px-5">
             <p
-                className="animate-fade-up text-2xl tracking-widest animate-ease-in-out md:text-5xl"
+                className="animate-fade-up text-xl md:text-5xl tracking-widest animate-ease-in-out"
                 style={{
                     animationDelay: `${getDelay()}ms`
                 }}
@@ -26,7 +26,7 @@ const HeroSection = () => {
             </p>
             <strong
                 className={cn(
-                    `text-4xl md:text-8xl tracking-widest font-black  bg-clip-text  custom-strong bg-gradient-to-r from-cyan-400 to-blue-500`,
+                    `text-3xl md:text-8xl tracking-widest font-black bg-clip-text custom-strong bg-gradient-to-r from-cyan-400 to-blue-500`,
                     'animate-fade-up animate-ease-in-out'
                 )}
                 style={{
@@ -37,7 +37,7 @@ const HeroSection = () => {
                 {NICKNAME}
                 <strong
                     className={cn(
-                        `text-3xl md:text-5xl tracking-widest font-black  bg-clip-text  custom-strong bg-gradient-to-r from-cyan-400 to-blue-500`,
+                        `text-2xl md:text-5xl tracking-widest font-black bg-clip-text custom-strong bg-gradient-to-r from-cyan-400 to-blue-500`,
                         'animate-fade-up animate-ease-in-out'
                     )}
                     style={{
@@ -58,7 +58,7 @@ const HeroSection = () => {
             </div>
             <p
                 className={cn(
-                    'text-2xl md:text-5xl tracking-widest',
+                    'text-xl md:text-5xl tracking-widest leading-relaxed',
                     'animate-fade-up animate-ease-in-out'
                 )}
                 style={{
@@ -68,14 +68,12 @@ const HeroSection = () => {
                 喜欢&nbsp;
                 <span className={`font-semibold text-[#45ca9d]`}>Vue</span>、
                 <span className={`font-semibold text-[#00d8ff]`}>React</span>、
-                {/* <span className={`font-semibold text-[#5bac47]`}>Node</span>、 */}
-                {/* <span className={`font-semibold text-[#fcc72b]`}>Vitest</span>、 */}
                 <span className={`font-semibold text-[#007acc]`}>TypeScript</span>
-                <span className="ml-4">\owo/ ~</span>
+                <span className="ml-2">\owo/ ~</span>
             </p>
             <p
                 className={cn(
-                    'text-base md:text-2xl text-[#a3a3a3] tracking-widest',
+                    'text-sm md:text-2xl text-[#a3a3a3] tracking-widest',
                     'animate-fade-up animate-ease-in-out'
                 )}
                 style={{
@@ -85,23 +83,32 @@ const HeroSection = () => {
                 在这里记录我的日常，做一个简单、更好的自己💪
             </p>
             <div
-                className={cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')}
+                className={cn('flex space-x-3 md:space-x-4 mt-2', 'animate-fade-up animate-ease-in-out')}
                 style={{
                     animationDelay: `${getDelay()}ms`
                 }}
             >
-                <Link href={PATHS.SITE_BLOG} className={cn(buttonVariants({ variant: 'outline' }))}>
+                <Link
+                    href={PATHS.SITE_BLOG}
+                    className={cn(
+                        buttonVariants({ variant: 'outline' }),
+                        'text-sm md:text-base px-3 py-2 md:px-4 md:py-2'
+                    )}
+                >
                     我的博客
                 </Link>
                 <Link
                     href={PATHS.SITE_ABOUT}
-                    className={cn(buttonVariants({ variant: 'outline' }))}
+                    className={cn(
+                        buttonVariants({ variant: 'outline' }),
+                        'text-sm md:text-base px-3 py-2 md:px-4 md:py-2'
+                    )}
                 >
                     关于我
                 </Link>
             </div>
             <ul
-                className={cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')}
+                className={cn('flex space-x-3 md:space-x-4 mt-2', 'animate-fade-up animate-ease-in-out')}
                 style={{
                     animationDelay: `${getDelay()}ms`
                 }}
@@ -111,7 +118,12 @@ const HeroSection = () => {
                         <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger asChild>
-                                    <Button asChild variant="outline" size="icon">
+                                    <Button
+                                        asChild
+                                        variant="outline"
+                                        size="icon"
+                                        className="w-8 h-8 md:w-10 md:h-10"
+                                    >
                                         <Link href={el.link} target="_blank">
                                             {el.icon}
                                         </Link>

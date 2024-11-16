@@ -4,7 +4,7 @@ export default function RSS() {
             href="/api/rss"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-muted-foreground hover:font-semibold hover:text-primary"
+            className="flex items-center gap-1 text-muted-foreground hover:font-semibold hover:text-primary ml-2"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
