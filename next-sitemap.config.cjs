@@ -1,4 +1,4 @@
-const siteUrl = process.env.SITE_URL || 'https://yaolifeng.vercel.app';
+const siteUrl = process.env.SITE_URL || 'https://yaolifeng.com';
 
 // more detail to: https://github.com/iamvishnusankar/next-sitemap
 

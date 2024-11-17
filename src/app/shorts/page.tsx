@@ -19,7 +19,7 @@ const Page: NextPage = async () => {
     return (
         <>
             <h2 className="pb-8 text-3xl font-bold md:text-4xl px-6 pt-8">最新片段</h2>
-            <Box my="4" className="columns-3xs space-y-4 px-6 mb-24">
+            <Box my="4" className="columns-3xs space-y-4 px-6 mb-24" >
                 {shorts.map((short: any) => (
                     <ShortItem key={short.id} short={short} />
                 ))}
@@ -32,7 +32,7 @@ function ShortItem({ short }: { short: Short }) {
     const photo = short.url;
 
     return (
-        <Card size="2" className="border border-[#2f2f2f] rounded-[8px] p-0 overflow-hidden">
+        <Card size="2" className="border border-[#2f2f2f] rounded-[8px] p-0 overflow-hidden short-item">
             <Link href={`/shorts/${short.slug}`} className="flex flex-col">
                 {
                     <ProgressiveImage
