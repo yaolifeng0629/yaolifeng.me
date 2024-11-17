@@ -42,24 +42,24 @@ export const MarkdownTOC = memo(() => {
         setTocList(toc);
     });
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const headings = document.querySelectorAll('.markdown-body h2, .markdown-body h3');
-    //         let currentActiveId = '';
+    useEffect(() => {
+        const handleScroll = () => {
+            const headings = document.querySelectorAll('.markdown-body h2, .markdown-body h3');
+            let currentActiveId = '';
 
-    //         headings.forEach((heading) => {
-    //             const { top } = heading.getBoundingClientRect();
-    //             if (top <= 100) {
-    //                 currentActiveId = heading.id;
-    //             }
-    //         });
+            headings.forEach((heading) => {
+                const { top } = heading.getBoundingClientRect();
+                if (top <= 100) {
+                    currentActiveId = heading.id;
+                }
+            });
 
-    //         setActiveId(currentActiveId);
-    //     };
+            setActiveId(currentActiveId);
+        };
 
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // }, []);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <div className="sticky top-[100px] space-y-4 px-4 py-4 border bg-card text-card-foreground shadow-sm mb-20 rounded-md">
