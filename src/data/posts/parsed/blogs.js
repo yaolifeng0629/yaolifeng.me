@@ -51,6 +51,17 @@ import {
 
 export default [
     {
+        id: '8836d4d8-04bf-4a82-8568-ee66f85e3982',
+        url: '',
+        slug: 'frontend_image_progressive_loading',
+        createdAt: 1731813969335,
+        title: '前端优化图片渐进式加载',
+        description:
+            '前端优化图片渐进式加载的核心在于提升用户体验，通过逐步加载图片的方式，减少页面加载时间，避免用户长时间等待。文章可能介绍如何使用渐进式JPEG格式、懒加载技术、图片压缩和WebP格式等方法，来优化图片加载性能。此外，还可能探讨如何利用Intersection Observer API或滚动事件监听器，实现图片的智能加载，确保在用户可见区域内才加载图片，从而减少不必要的资源消耗。文章还可能分析不同浏览器对这些技术的支持情况，以及如何通过代码优化和性能监控工具，进一步提升图片加载效率。',
+        tags: [PERFORMANCE, HTML, CSS, BROWSER_APIS, HTTP],
+        content: '/blogs/2024/前端优化图片渐进式加载.md',
+    },
+    {
         id: 'b4bdcf90-d0a5-4ac9-97c1-480e783f68eb',
         url: '',
         slug: 'ios_clipboard_image_height_issue_solution',
