@@ -23,6 +23,7 @@ const Page: NextPage = () => {
                         author={project.author}
                         author_link={project.author_link}
                         avatar={project.avatar}
+                        home_link={project.home_link}
                     />
                 ))}
             </div>
