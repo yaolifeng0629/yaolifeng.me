@@ -5,6 +5,8 @@ import React, { useMemo } from 'react';
 import { HeroSection } from '@/components/home';
 import IntroScrollMouse from '@/components/intro-scroll-mouse';
 
+export const runtime = "edge";
+
 export default function Home() {
     const memoizedHeroSection = useMemo(() => <HeroSection />, []);
     const memoizedIntroScrollMouse = useMemo(() => <IntroScrollMouse />, []);
