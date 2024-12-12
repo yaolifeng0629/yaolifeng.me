@@ -28,6 +28,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'cdn.jsdelivr.net',
             },
+            {
+                protocol: 'https',
+                hostname: 'ims-oss.us.kg',
+            },
         ],
     },
     webpack: (config) => {
