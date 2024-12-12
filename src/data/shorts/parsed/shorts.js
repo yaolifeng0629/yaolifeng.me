@@ -51,6 +51,17 @@ import {
 
 export default [
     {
+        id: '133574f5-2abe-449b-a093-0dc509ee2f91',
+        url: '/other/shorts/vercel_app_cloudflare_domain_guide.webp',
+        slug: 'vercel_app_cloudflare_domain_guide',
+        createdAt: 1733629019837,
+        title: 'Vercel应用绑定到CloudFlare域名指南',
+        description:
+            '如何将Vercel应用绑定到CloudFlare域名的详细步骤，包括在CloudFlare中配置DNS记录、设置CNAME或A记录指向Vercel，以及在Vercel后台配置自定义域名的过程。重点讲解了域名解析的配置细节，确保域名能够正确指向Vercel应用，同时避免常见的配置错误。此外，还可能涉及SSL证书的自动配置、域名验证的注意事项，以及如何处理域名绑定后可能出现的访问问题。通过这一指南，用户可以顺利完成Vercel与CloudFlare的域名绑定，确保应用的稳定性和安全性。',
+        tags: [NODEJS, EXPRESS, NEXTJS],
+        content: '/shorts/Vercel应用绑定到CloudFlare域名指南.md',
+    },
+    {
         id: 'b795d11d-f019-4daf-9a9f-03766ee61acb',
         url: '/other/shorts/cursor.webp',
         slug: 'cursor_free_guide',
