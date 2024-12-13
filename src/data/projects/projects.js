@@ -28,6 +28,15 @@ export const Projects = [
         home_link: 'https://yaolifeng.com',
     },
     {
+        name: 'INDIETOOLS',
+        description: 'Indie Tools（独立开发者出海工具导航站）',
+        link: 'https://github.com/yaolifeng0629/Awesome-independent-tools',
+        author: 'yaolifeng0629',
+        author_link: 'https://github.com/yaolifeng0629',
+        avatar: 'https://ims-oss.us.kg/projects/favicon-indietools.png',
+        home_link: 'https://www.indietools.work',
+    },
+    {
         name: 'Awesome-independent-tools',
         description: '独立开发者出海工具收集站（Awesome Independent developer sea tool collection station）',
         link: 'https://github.com/yaolifeng0629/Awesome-independent-tools',
@@ -74,5 +83,14 @@ export const Projects = [
         author_link: 'https://github.com/yaolifeng0629',
         avatar: 'https://avatars.githubusercontent.com/u/88535417?v=4',
         home_link: 'https://github.com/yaolifeng0629/mini-zustand',
+    },
+    {
+        name: 'Holiday Countdown',
+        description: '一个漂亮简洁的假期倒计时（A nice and simple holiday countdown）',
+        link: 'https://github.com/yaolifeng0629/countdown',
+        author: 'yaolifeng0629',
+        author_link: 'https://github.com/yaolifeng0629',
+        avatar: 'https://ims-oss.us.kg/projects/favicon-countdown.png',
+        home_link: 'https://countdown.us.kg',
     },
 ];
