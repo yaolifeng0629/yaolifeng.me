@@ -30,7 +30,7 @@ export default function RootLayout({
             </head>
             <body className="flex flex-col items-center dark scroll-smooth">
                 <Navbar />
-                <main className="min-h-[calc(100vh-190px)] w-screen max-w-screen-md 2xl:max-w-7xl md:px-10 z-[2] scroll-smooth">
+                <main className="min-h-[calc(100vh-190px)] w-screen max-w-screen-md 2xl:max-w-7xl px-4 md:px-10 z-[2] scroll-smooth">
                     {children}
                 </main>
                 <Analytics />

@@ -13,7 +13,7 @@ const Page: NextPage = () => {
     return (
         <Wrapper className="container px-4 py-8 md:px-6 md:py-12">
             <h2 className="mb-8 text-3xl font-bold md:text-4xl">项目</h2>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 lg:gap-6">
                 {Projects.map((project, index) => (
                     <ProjectItem
                         key={index}

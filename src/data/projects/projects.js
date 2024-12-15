@@ -5,7 +5,7 @@ export const Projects = [
         link: 'https://github.com/cuixueshe/earthworm',
         author: 'cuixueshe',
         author_link: 'https://github.com/cuixiaorui',
-        avatar: 'https://avatars.githubusercontent.com/u/106643939?v=4',
+        avatar: 'https://ims-oss.us.kg/projects/julebu.webp',
         home_link: 'https://julebu.co',
     },
     {
@@ -24,7 +24,7 @@ export const Projects = [
         link: 'https://github.com/yaolifeng0629/yaolifeng.com',
         author: 'yaolifeng0629',
         author_link: 'https://github.com/yaolifeng0629',
-        avatar: 'https://avatars.githubusercontent.com/u/88535417?v=4',
+        avatar: 'https://ims-oss.us.kg/projects/Immerse-light.webp',
         home_link: 'https://yaolifeng.com',
     },
     {
@@ -52,7 +52,7 @@ export const Projects = [
         link: 'https://github.com/yaolifeng0629/del-repos',
         author: 'yaolifeng0629',
         author_link: 'https://github.com/yaolifeng0629',
-        avatar: 'https://avatars.githubusercontent.com/u/88535417?v=4',
+        avatar: 'https://ims-oss.us.kg/projects/del-repos.webp',
         home_link: 'https://www.npmjs.com/package/del-repos',
     },
     {
