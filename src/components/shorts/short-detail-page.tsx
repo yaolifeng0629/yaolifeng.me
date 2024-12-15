@@ -31,7 +31,7 @@ export const ShortsDetailPage = ({ shorts }: BlogDetailProps) => {
             <div className="flex items-center space-x-4 pb-4 pt-8 text-sm text-muted-foreground">
                 <p>发布于&nbsp;&nbsp;{prettyDateWithWeekday(shorts.createdAt)}</p>
             </div>
-            <h1 className="break-all py-6 text-4xl font-semibold">{shorts.title}</h1>
+            <h1 className="break-all py-6 text-2xl md:text-4xl font-semibold">{shorts.title}</h1>
 
             <p className="py-4 text-neutral-500">{shorts.description}</p>
 
